@@ -1,5 +1,4 @@
-﻿using System;
-using ChannelRankings.Models.Authorities;
+﻿using ChannelRankings.Models.Authorities;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -15,6 +14,7 @@ namespace ChannelRankings.Models
 
         public virtual Corporation Corporation { get; set; }
 
+        [Required]
         public virtual Country Country { get; set; }
 
         public virtual ICollection<Sponsor> Sponsors { get; set; }
