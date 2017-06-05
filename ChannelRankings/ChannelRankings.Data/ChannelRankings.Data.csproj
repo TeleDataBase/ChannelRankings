@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenericRepository.cs" />
     <Compile Include="Migrations\201706041817195_update.cs" />
     <Compile Include="Migrations\201706041817195_update.Designer.cs">
       <DependentUpon>201706041817195_update.cs</DependentUpon>
@@ -64,6 +65,7 @@
       <DependentUpon>201706051601401_removed Iperson interface.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="SqlServerDataProvider.cs" />
     <Compile Include="SqlServerDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,6 +77,10 @@
     <ProjectReference Include="..\ChannelRankings.Models\ChannelRankings.Models.csproj">
       <Project>{1cd62dc8-1847-4408-b788-6b88db802895}</Project>
       <Name>ChannelRankings.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChannelRankins.Contracts\ChannelRankins.Contracts.csproj">
+      <Project>{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}</Project>
+      <Name>ChannelRankins.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

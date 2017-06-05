@@ -57,5 +57,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChannelRankings.Models\ChannelRankings.Models.csproj">
+      <Project>{1CD62DC8-1847-4408-B788-6B88DB802895}</Project>
+      <Name>ChannelRankings.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
