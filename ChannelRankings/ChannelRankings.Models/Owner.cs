@@ -1,19 +1,12 @@
 ﻿using System;
-using ChannelRankings.Models.Contracts;
 using System.Collections.Generic;
 using ChannelRankings.Models.Authorities;
+using ChannelRankings.Models.Contracts;
 
 namespace ChannelRankings.Models
 {
-    public class Owner : IPerson, IOwner
+    public class Owner : IPerson
     {
-        private ICollection<ICorporation> corporations;
-
-        public Owner()
-        {
-            this.corporations = new HashSet<ICorporation>();
-        }
-
         public int Id { get; set; }
 
         public string FirstName { get; set; }
@@ -22,17 +15,6 @@ namespace ChannelRankings.Models
 
         public string NetWorth { get; set; }
 
-        public virtual ICollection<ICorporation> Corporations
-        {
-            get
-            {
-                return this.corporations;
-            }
-
-            set
-            {
-                this.corporations = value;
-            }
-        }
+        public virtual ICollection<Corporation> Corporations { get; set; }
     }
 }

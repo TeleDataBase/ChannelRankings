@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankings.Models", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankings.Data", "ChannelRankings.Data\ChannelRankings.Data.csproj", "{68931661-55B1-4241-9B91-65E327D917F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankings.Utils", "ChannelRankings.Utils\ChannelRankings.Utils.csproj", "{1E2D1B6B-42C2-40C2-A9FF-31C9193B67D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankings.XmlModels", "ChannelRankings.XmlModels\ChannelRankings.XmlModels.csproj", "{D2F641D3-CB82-42E8-97E6-870281CD9695}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{68931661-55B1-4241-9B91-65E327D917F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68931661-55B1-4241-9B91-65E327D917F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68931661-55B1-4241-9B91-65E327D917F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E2D1B6B-42C2-40C2-A9FF-31C9193B67D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2D1B6B-42C2-40C2-A9FF-31C9193B67D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2D1B6B-42C2-40C2-A9FF-31C9193B67D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2D1B6B-42C2-40C2-A9FF-31C9193B67D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F641D3-CB82-42E8-97E6-870281CD9695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F641D3-CB82-42E8-97E6-870281CD9695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F641D3-CB82-42E8-97E6-870281CD9695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F641D3-CB82-42E8-97E6-870281CD9695}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
