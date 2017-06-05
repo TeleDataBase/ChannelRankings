@@ -5,8 +5,15 @@ using ChannelRankings.Models.Authorities;
 
 namespace ChannelRankings.Models
 {
-    public class Owner : IPerson
+    public class Owner : IPerson, IOwner
     {
+        private ICollection<ICorporation> corporations;
+
+        public Owner()
+        {
+            this.corporations = new HashSet<ICorporation>();
+        }
+
         public int Id { get; set; }
 
         public string FirstName { get; set; }
@@ -15,6 +22,17 @@ namespace ChannelRankings.Models
 
         public string NetWorth { get; set; }
 
-        public virtual ICollection<Corporation> Corporations { get; set; }
+        public virtual ICollection<ICorporation> Corporations
+        {
+            get
+            {
+                return this.corporations;
+            }
+
+            set
+            {
+                this.corporations = value;
+            }
+        }
     }
 }
