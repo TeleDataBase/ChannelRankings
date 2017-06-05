@@ -13,14 +13,15 @@ namespace TestProject
     {
         public static void Main()
         {
-            var serializer = new XmlSerializer(typeof(Ranklist));
 
             using (var fileStream = new FileStream("../../generated-channels.xml", FileMode.Open))
             {
+                var serializer = new XmlSerializer(typeof(Ranklist));
+
                 var ranklist = (Ranklist)serializer.Deserialize(fileStream);
                 var channels = ranklist.Channels.ToList();
 
-                Console.WriteLine(channels[0].Sponsors.FirstOrDefault().About);
+                Console.WriteLine(channels[0].Sponsors.FirstOrDefault().Name);
             }
         }
     }

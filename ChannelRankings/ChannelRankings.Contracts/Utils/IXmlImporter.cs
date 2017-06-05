@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ChannelRankings.Utils.Contracts
+namespace ChannelRankings.Contracts.Utils
 {
     public interface IXmlImporter
     {

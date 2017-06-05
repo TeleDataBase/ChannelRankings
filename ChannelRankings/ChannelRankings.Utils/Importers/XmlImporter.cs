@@ -1,17 +1,33 @@
 ﻿using System;
-using ChannelRankings.Utils.Contracts;
+using ChannelRankins.Contracts.Data;
+using ChannelRankins.Contracts.Utils;
+using System.IO;
+using ChannelRankings.XmlModels;
+using System.Linq;
+using System.Xml.Serialization;
 
 namespace ChannelRankings.Utils.Importers
 {
     public class XmlImporter : IXmlImporter
     {
-        public XmlImporter()
+        private ISqlServerDatabase connection;
+
+        public XmlImporter(ISqlServerDatabase connection)
         {
+            this.connection = connection;
         }
 
-        public void ImportXml(string filePath)
+        public void Import(ISqlServerDatabase connection)
         {
-            throw new NotImplementedException();
+            using (var fileStream = new FileStream("../../generated-channels.xml", FileMode.Open))
+            {
+                var serializer = new XmlSerializer(typeof(Ranklist));
+
+                var ranklist = (Ranklist)serializer.Deserialize(fileStream);
+                var channels = ranklist.Channels.ToList();
+
+                //Sort and add to database
+            }
         }
     }
 }

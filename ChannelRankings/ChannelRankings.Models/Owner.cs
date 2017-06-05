@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using ChannelRankings.Models.Authorities;
-using ChannelRankings.Models.Contracts;
 
 namespace ChannelRankings.Models
 {
-    public class Owner : IPerson
+    public class Owner
     {
         public int Id { get; set; }
 
