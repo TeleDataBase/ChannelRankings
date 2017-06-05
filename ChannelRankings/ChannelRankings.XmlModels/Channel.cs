@@ -10,12 +10,13 @@ namespace ChannelRankings.XmlModels
         [XmlElement("name")]
         public string Name { get; set; }
 
-        [XmlElement("corporationName")]
+        [XmlElement("corporation")]
         public virtual Corporation Corporation { get; set; }
 
-        [XmlElement("countryName")]
+        [XmlElement("country")]
         public virtual Country Country { get; set; }
 
-        public virtual IList<Sponsor> Sponsors { get; set; }
+        [XmlArray("sponsors"), XmlArrayItem("sponsor")]
+        public virtual List<Sponsor> Sponsors { get; set; }
     }
 }

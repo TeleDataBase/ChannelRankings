@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace ChannelRankings.XmlModels
 {
+    [XmlRoot("channelRanklist")]
     public class Ranklist
     {
-        public virtual IList<Channel> Channels { get; set; }
+        [XmlElement("channel")]
+        public virtual List<Channel> Channels { get; set; }
     }
 }

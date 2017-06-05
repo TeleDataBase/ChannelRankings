@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<channelRanklist>
+  <channel>
+    <countryRanking>2</countryRanking>
+    <name>BTV</name>
+    <corporation>
+      <corporationName>BTV Media Group</corporationName>
+    </corporation>
+    <country>
+      <countryName>Bulgaria</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Hippoland</sponsorName>
+        <sponsorDescription>Igrachki za vas.</sponsorDescription>
+      </sponsor>
+    </sponsors>
+    <owner>
+      <firstName>Pavel</firstName>
+      <lastName>Stanchev</lastName>
+      <netWorth>15050000</netWorth>
+    </owner>
+  </channel>
+</channelRanklist>

@@ -55,6 +55,10 @@
     <Compile Include="Migrations\201706041834540_Used Fluent API for constraining Sponsor model.Designer.cs">
       <DependentUpon>201706041834540_Used Fluent API for constraining Sponsor model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706051059200_test migration.cs" />
+    <Compile Include="Migrations\201706051059200_test migration.Designer.cs">
+      <DependentUpon>201706051059200_test migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SqlServerDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706041834540_Used Fluent API for constraining Sponsor model.resx">
       <DependentUpon>201706041834540_Used Fluent API for constraining Sponsor model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706051059200_test migration.resx">
+      <DependentUpon>201706051059200_test migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
