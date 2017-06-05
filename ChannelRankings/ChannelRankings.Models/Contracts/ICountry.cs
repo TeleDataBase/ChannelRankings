@@ -12,6 +12,6 @@ namespace ChannelRankings.Models.Contracts
 
         string Name { get; set; }
 
-        ICollection<IChannel> Channels { get; set; };
+        ICollection<IChannel> Channels { get; set; }
     }
 }
