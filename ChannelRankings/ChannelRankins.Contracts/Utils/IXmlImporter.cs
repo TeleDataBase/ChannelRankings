@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChannelRankins.Contracts.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace ChannelRankins.Contracts.Utils
 {
     public interface IXmlImporter
     {
-
+        void Import(ISqlServerDatabase connection);
     }
 }

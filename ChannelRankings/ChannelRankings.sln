@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankings.XmlModels",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{A782C67A-16B6-4A7D-B5D2-3CC97432417E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankins.Contracts", "ChannelRankins.Contracts\ChannelRankins.Contracts.csproj", "{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A782C67A-16B6-4A7D-B5D2-3CC97432417E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A782C67A-16B6-4A7D-B5D2-3CC97432417E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A782C67A-16B6-4A7D-B5D2-3CC97432417E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

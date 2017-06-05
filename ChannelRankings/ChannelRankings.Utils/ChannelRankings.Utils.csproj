@@ -40,9 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IXmlImporter.cs" />
     <Compile Include="Importers\XmlImporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChannelRankings.XmlModels\ChannelRankings.XmlModels.csproj">
+      <Project>{D2F641D3-CB82-42E8-97E6-870281CD9695}</Project>
+      <Name>ChannelRankings.XmlModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChannelRankins.Contracts\ChannelRankins.Contracts.csproj">
+      <Project>{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}</Project>
+      <Name>ChannelRankins.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

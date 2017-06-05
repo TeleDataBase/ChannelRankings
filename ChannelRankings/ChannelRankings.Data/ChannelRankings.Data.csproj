@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\ISqlServerConnection.cs" />
     <Compile Include="Migrations\201706041817195_update.cs" />
     <Compile Include="Migrations\201706041817195_update.Designer.cs">
       <DependentUpon>201706041817195_update.cs</DependentUpon>
@@ -59,6 +58,10 @@
     <Compile Include="Migrations\201706051059200_test migration.cs" />
     <Compile Include="Migrations\201706051059200_test migration.Designer.cs">
       <DependentUpon>201706051059200_test migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706051601401_removed Iperson interface.cs" />
+    <Compile Include="Migrations\201706051601401_removed Iperson interface.Designer.cs">
+      <DependentUpon>201706051601401_removed Iperson interface.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SqlServerDbContext.cs" />
@@ -83,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706051059200_test migration.resx">
       <DependentUpon>201706051059200_test migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706051601401_removed Iperson interface.resx">
+      <DependentUpon>201706051601401_removed Iperson interface.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

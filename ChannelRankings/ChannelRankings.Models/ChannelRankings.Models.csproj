@@ -44,7 +44,6 @@
     <Compile Include="Authorities\Corporation.cs" />
     <Compile Include="Authorities\Sponsor.cs" />
     <Compile Include="Channel.cs" />
-    <Compile Include="Contracts\IPerson.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="Owner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
