@@ -34,6 +34,21 @@ namespace ChannelRankings.Data
             base.OnModelCreating(modelBuilder);
         }
 
+        private void OnCorporationModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Corporation>()
+                .HasKey(corp => corp.Id);
+
+            modelBuilder.Entity<Corporation>()
+                .Property(corp => corp.Name)
+                .IsRequired()
+                .HasMaxLength(40);
+
+            modelBuilder.Entity<Corporation>()
+                .HasRequired<Owner>(corp => corp.Owner);
+
+        }
+
         private void OnSponsorModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Sponsor>()
@@ -53,6 +68,17 @@ namespace ChannelRankings.Data
             modelBuilder.Entity<Sponsor>()
                 .Property(sponsor => sponsor.About)
                 .HasColumnType("ntext");
+        }
+
+        private void OnCountryModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Country>()
+                .HasKey(country => country.Id);
+
+            modelBuilder.Entity<Country>()
+                .Property(country => country.Name)
+                .HasMaxLength(20)
+                .IsRequired();
         }
 
         DbEntityEntry IDbContext.Entry<T>(T entity)
