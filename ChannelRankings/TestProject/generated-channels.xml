@@ -40,6 +40,10 @@
         <sponsorName>Porsche</sponsorName>
         <sponsorDescription>Premiun cars.</sponsorDescription>
       </sponsor>
+      <sponsor>
+        <sponsorName>EVS</sponsorName>
+        <sponsorDescription>Pharmacy for everyone.</sponsorDescription>
+      </sponsor>
     </sponsors>
   </channel>
   <channel>

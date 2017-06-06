@@ -48,7 +48,6 @@ namespace ChannelRankings.Data
 
             modelBuilder.Entity<Corporation>()
                 .HasRequired<Owner>(corp => corp.Owner);
-
         }
 
         private void OnSponsorModelCreating(DbModelBuilder modelBuilder)

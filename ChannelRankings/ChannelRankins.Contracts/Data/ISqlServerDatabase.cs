@@ -5,8 +5,6 @@ namespace ChannelRankins.Contracts.Data
 {
     public interface ISqlServerDatabase
     {
-        IDbContext Context { get; }
-
         IRepository<Corporation> Corporations { get; }
 
         IRepository<Sponsor> Sponsors { get; }

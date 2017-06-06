@@ -18,34 +18,55 @@ namespace TestProject
     {
         public static void Main()
         {
-            //var directory = new DirectoryInfo("../../generated-channels.xml");
+            var directory = new DirectoryInfo("../../generated-channels.xml");
 
-            //using (var fileStream = new FileStream(directory.FullName, FileMode.Open))
-            //{
-            //    var serializer = new XmlSerializer(typeof(Ranklist));
+            using (var fileStream = new FileStream(directory.FullName, FileMode.Open))
+            {
+                var serializer = new XmlSerializer(typeof(Ranklist));
 
-            //    var ranklist = (Ranklist)serializer.Deserialize(fileStream);
-            //    var channels = ranklist.Channels.ToList();
+                var ranklist = (Ranklist)serializer.Deserialize(fileStream);
+                var channels = ranklist.Channels.ToList();
 
-            //}
-            var context = new SqlServerDbContext();
-            var db = new SqlServerDataProvider(context);
-            AddToDb(db);
+                var context = new SqlServerDbContext();
+                var db = new SqlServerDataProvider(context);
+                AddToDb(db, channels[1]);
+            }
         }
 
-        private static void AddToDb(ISqlServerDatabase database)
+        private static void AddToDb(ISqlServerDatabase database, Channel channel)
         {
             var factory = new ChannelModelMapper();
 
-            var owner = factory.CreateOwner("Mitko", "Stoikov", "2312312");
+            var owner = factory.CreateOwner(
+                channel.Corporation.Owner.FirstName,
+                channel.Corporation.Owner.LastName,
+                channel.Corporation.Owner.NetWorth
+                );
 
-            var coutry = factory.CreateCountry("Botswana");
+            var coutry = factory.CreateCountry(
+                channel.Country.Name
+                );
 
-            var sponsor = factory.CreateSponsor("Porsche", "brum brum");
+            var sponsors = new List<Sponsor>();
 
-            var corporation = factory.CreateCorporation("Golqmata firma", owner);
+            foreach (var sponsor in channel.Sponsors)
+            {
+                sponsors.Add(
+                    factory.CreateSponsor(
+                        sponsor.Name,
+                        sponsor.About
+                        )
+                    );
+            }
 
-            var returnChannel = factory.CreateChannel("BTV", corporation, coutry, new List<Sponsor> { sponsor });
+            var corporation = factory.CreateCorporation(
+                channel.Corporation.Name,
+                owner
+                );
+
+            var returnChannel = factory.CreateChannel(
+                channel.Name, corporation, coutry, sponsors
+                );
 
             database.Channels.Add(returnChannel);
             database.Commit();
