@@ -30,6 +30,8 @@ namespace ChannelRankings.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            this.OnCountryModelCreating(modelBuilder);
+            this.OnCorporationModelCreating(modelBuilder);
             this.OnSponsorModelCreating(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
