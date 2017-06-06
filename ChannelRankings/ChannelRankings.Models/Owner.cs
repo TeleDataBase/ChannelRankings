@@ -14,6 +14,6 @@ namespace ChannelRankings.Models
 
         public string NetWorth { get; set; }
 
-        public virtual ICollection<Corporation> Corporations { get; set; }
+        public virtual Corporation Corporation { get; set; }
     }
 }

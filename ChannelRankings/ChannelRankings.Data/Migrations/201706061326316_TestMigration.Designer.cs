@@ -7,13 +7,13 @@ namespace ChannelRankings.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class removedIpersoninterface : IMigrationMetadata
+    public sealed partial class TestMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(removedIpersoninterface));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(TestMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706051601401_removed Iperson interface"; }
+            get { return "201706061326316_TestMigration"; }
         }
         
         string IMigrationMetadata.Source
