@@ -1,4 +1,7 @@
-﻿using ChannelRankings.XmlModels;
+﻿using ChannelRankings.Data;
+using ChannelRankings.Models.Authorities;
+using ChannelRankings.Utils.ModelFactory;
+using ChannelRankings.XmlModels;
 using ChannelRankins.Contracts.Data;
 using System;
 using System.Collections.Generic;
@@ -15,33 +18,37 @@ namespace TestProject
     {
         public static void Main()
         {
-            var directory = new DirectoryInfo("../../generated-channels.xml");
+            //var directory = new DirectoryInfo("../../generated-channels.xml");
 
-            using (var fileStream = new FileStream(directory.FullName, FileMode.Open))
-            {
-                var serializer = new XmlSerializer(typeof(Ranklist));
-
-                var ranklist = (Ranklist)serializer.Deserialize(fileStream);
-                var channels = ranklist.Channels.ToList();
-
-                
-                Console.WriteLine(channels[0].Corporation.Owner.LastName);
-            }
-
-        }
-
-        private static void AddToDb(ISqlServerDatabase database, Channel channel)
-        {
-            //var owner = new Models.Owner(){ FirstName = channel.Sponsors.}
-
-            //var channelToAdd = new ChannelRankings.Models.Channel()
+            //using (var fileStream = new FileStream(directory.FullName, FileMode.Open))
             //{
-            //    Name = channel.Name,
-            //    Corporation = new Models.Corporation() { },
+            //    var serializer = new XmlSerializer(typeof(Ranklist));
+
+            //    var ranklist = (Ranklist)serializer.Deserialize(fileStream);
+            //    var channels = ranklist.Channels.ToList();
 
             //}
+            var context = new SqlServerDbContext();
+            var db = new SqlServerDataProvider(context);
+            AddToDb(db);
+        }
 
-            //database.Channels.Add((ChannelRankings.Models.Channel)channel);
+        private static void AddToDb(ISqlServerDatabase database)
+        {
+            var factory = new ChannelModelMapper();
+
+            var owner = factory.CreateOwner("Mitko", "Stoikov", "2312312");
+
+            var coutry = factory.CreateCountry("Botswana");
+
+            var sponsor = factory.CreateSponsor("Porsche", "brum brum");
+
+            var corporation = factory.CreateCorporation("Golqmata firma", owner);
+
+            var returnChannel = factory.CreateChannel("BTV", corporation, coutry, new List<Sponsor> { sponsor });
+
+            database.Channels.Add(returnChannel);
+            database.Commit();
         }
     }
 }

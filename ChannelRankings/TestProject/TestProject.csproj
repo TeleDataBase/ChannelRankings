@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,9 +50,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ChannelRankings.Data\ChannelRankings.Data.csproj">
+      <Project>{68931661-55B1-4241-9B91-65E327D917F6}</Project>
+      <Name>ChannelRankings.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChannelRankings.Models\ChannelRankings.Models.csproj">
+      <Project>{1CD62DC8-1847-4408-B788-6B88DB802895}</Project>
+      <Name>ChannelRankings.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChannelRankings.Utils\ChannelRankings.Utils.csproj">
+      <Project>{1E2D1B6B-42C2-40C2-A9FF-31C9193B67D7}</Project>
+      <Name>ChannelRankings.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChannelRankings.XmlModels\ChannelRankings.XmlModels.csproj">
       <Project>{d2f641d3-cb82-42e8-97e6-870281cd9695}</Project>
       <Name>ChannelRankings.XmlModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChannelRankins.Contracts\ChannelRankins.Contracts.csproj">
+      <Project>{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}</Project>
+      <Name>ChannelRankins.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

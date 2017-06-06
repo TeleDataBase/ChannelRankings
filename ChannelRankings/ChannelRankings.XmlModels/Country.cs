@@ -7,5 +7,7 @@ namespace ChannelRankings.XmlModels
     {
         [XmlElement("countryName")]
         public string Name { get; set; }
+
+
     }
 }

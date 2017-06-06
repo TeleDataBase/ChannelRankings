@@ -5,6 +5,11 @@
     <name>BTV</name>
     <corporation>
       <corporationName>BTV Media Group</corporationName>
+      <owner>
+        <firstName>Pavel</firstName>
+        <lastName>Stanchev</lastName>
+        <netWorth>15050000</netWorth>
+      </owner>
     </corporation>
     <country>
       <countryName>Bulgaria</countryName>
@@ -15,10 +20,47 @@
         <sponsorDescription>Igrachki za vas.</sponsorDescription>
       </sponsor>
     </sponsors>
-    <owner>
-      <firstName>Pavel</firstName>
-      <lastName>Stanchev</lastName>
-      <netWorth>15050000</netWorth>
-    </owner>
+  </channel>
+  <channel>
+    <countryRanking>1</countryRanking>
+    <name>Nova</name>
+    <corporation>
+      <corporationName>Nova Inc.</corporationName>
+      <owner>
+        <firstName>Didie</firstName>
+        <lastName>Shosel</lastName>
+        <netWorth>12000000</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Bulgaria</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Porsche</sponsorName>
+        <sponsorDescription>Premiun cars.</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <countryRanking>6</countryRanking>
+    <name>HBO</name>
+    <corporation>
+      <corporationName>HBO Group</corporationName>
+      <owner>
+        <firstName>Richard</firstName>
+        <lastName>Plepler</lastName>
+        <netWorth>32000000</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>USA</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>EVS</sponsorName>
+        <sponsorDescription>Pharmacy for everyone.</sponsorDescription>
+      </sponsor>
+    </sponsors>
   </channel>
 </channelRanklist>

@@ -7,5 +7,8 @@ namespace ChannelRankings.XmlModels.Authorities
     {
         [XmlElement("corporationName")]
         public string Name { get; set; }
+
+        [XmlElement("owner")]
+        public virtual Owner Owner { get; set; }
     }
 }

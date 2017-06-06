@@ -41,9 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Importers\XmlImporter.cs" />
+    <Compile Include="ModelFactory\ChannelModelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ChannelRankings.Models\ChannelRankings.Models.csproj">
+      <Project>{1CD62DC8-1847-4408-B788-6B88DB802895}</Project>
+      <Name>ChannelRankings.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChannelRankings.XmlModels\ChannelRankings.XmlModels.csproj">
       <Project>{D2F641D3-CB82-42E8-97E6-870281CD9695}</Project>
       <Name>ChannelRankings.XmlModels</Name>

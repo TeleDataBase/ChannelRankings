@@ -1,10 +1,9 @@
-﻿using System;
-using ChannelRankins.Contracts.Data;
-using ChannelRankins.Contracts.Utils;
-using System.IO;
-using ChannelRankings.XmlModels;
+﻿using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using ChannelRankins.Contracts.Data;
+using ChannelRankins.Contracts.Utils;
+using ChannelRankings.XmlModels;
 
 namespace ChannelRankings.Utils.Importers
 {
@@ -19,7 +18,9 @@ namespace ChannelRankings.Utils.Importers
 
         public void Import(ISqlServerDatabase connection)
         {
-            using (var fileStream = new FileStream("../../generated-channels.xml", FileMode.Open))
+            var directory = new DirectoryInfo("../../generated-channels.xml");
+
+            using (var fileStream = new FileStream(directory.FullName, FileMode.Open))
             {
                 var serializer = new XmlSerializer(typeof(Ranklist));
 
