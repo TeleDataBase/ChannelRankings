@@ -1,35 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <channelRanklist>
   <channel>
-    <countryRanking>2</countryRanking>
-    <name>BTV</name>
-    <corporation>
-      <corporationName>BTV Media Group</corporationName>
-      <owner>
-        <firstName>Pavel</firstName>
-        <lastName>Stanchev</lastName>
-        <netWorth>15050000</netWorth>
-      </owner>
-    </corporation>
-    <country>
-      <countryName>Bulgaria</countryName>
-    </country>
-    <sponsors>
-      <sponsor>
-        <sponsorName>Hippoland</sponsorName>
-        <sponsorDescription>Igrachki za vas.</sponsorDescription>
-      </sponsor>
-    </sponsors>
-  </channel>
-  <channel>
-    <countryRanking>1</countryRanking>
+    <worldRankplace>456</worldRankplace>
     <name>Nova</name>
     <corporation>
       <corporationName>Nova Inc.</corporationName>
       <owner>
         <firstName>Didie</firstName>
-        <lastName>Shosel</lastName>
-        <netWorth>12000000</netWorth>
+        <lastName>Shoshel</lastName>
+        <netWorth>8872179</netWorth>
       </owner>
     </corporation>
     <country>
@@ -37,24 +16,83 @@
     </country>
     <sponsors>
       <sponsor>
-        <sponsorName>Porsche</sponsorName>
-        <sponsorDescription>Premiun cars.</sponsorDescription>
-      </sponsor>
-      <sponsor>
         <sponsorName>EVS</sponsorName>
-        <sponsorDescription>Pharmacy for everyone.</sponsorDescription>
+        <sponsorDescription>Random description 1</sponsorDescription>
       </sponsor>
     </sponsors>
   </channel>
   <channel>
-    <countryRanking>6</countryRanking>
+    <worldRankplace>348</worldRankplace>
+    <name>BTV</name>
+    <corporation>
+      <corporationName>BTV Media Group</corporationName>
+      <owner>
+        <firstName>Pavel</firstName>
+        <lastName>Stnchev</lastName>
+        <netWorth>7555461</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Russia</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Hippoland</sponsorName>
+        <sponsorDescription>Random description 2</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>372</worldRankplace>
     <name>HBO</name>
     <corporation>
       <corporationName>HBO Group</corporationName>
       <owner>
         <firstName>Richard</firstName>
         <lastName>Plepler</lastName>
-        <netWorth>32000000</netWorth>
+        <netWorth>9251644</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Antarctica</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Porsche</sponsorName>
+        <sponsorDescription>Random description 3</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>128</worldRankplace>
+    <name>Animal Planet</name>
+    <corporation>
+      <corporationName>BCBC</corporationName>
+      <owner>
+        <firstName>Adam</firstName>
+        <lastName>Smith</lastName>
+        <netWorth>2597877</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Canada</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Kamenitsa</sponsorName>
+        <sponsorDescription>Random description 4</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>176</worldRankplace>
+    <name>Eurosport</name>
+    <corporation>
+      <corporationName>UKTV</corporationName>
+      <owner>
+        <firstName>Akdrich</firstName>
+        <lastName>Johnson</lastName>
+        <netWorth>4632304</netWorth>
       </owner>
     </corporation>
     <country>
@@ -62,8 +100,260 @@
     </country>
     <sponsors>
       <sponsor>
-        <sponsorName>Kamenitsa</sponsorName>
-        <sponsorDescription>Men know why</sponsorDescription>
+        <sponsorName>McDonald's</sponsorName>
+        <sponsorDescription>Random description 5</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>450</worldRankplace>
+    <name>Eurosport 2</name>
+    <corporation>
+      <corporationName>ITV Network</corporationName>
+      <owner>
+        <firstName>Armstrong</firstName>
+        <lastName>Williams</lastName>
+        <netWorth>2660523</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>China</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Coca-Cola</sponsorName>
+        <sponsorDescription>Random description 6</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>335</worldRankplace>
+    <name>Fox Crime</name>
+    <corporation>
+      <corporationName>Corp Parent 1</corporationName>
+      <owner>
+        <firstName>Ashford</firstName>
+        <lastName>Brown</lastName>
+        <netWorth>5528676</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Brazil</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Procter and Gamble</sponsorName>
+        <sponsorDescription>Random description 7</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>113</worldRankplace>
+    <name>Fox life</name>
+    <corporation>
+      <corporationName>Parent Corp 1</corporationName>
+      <owner>
+        <firstName>Axon</firstName>
+        <lastName>Jones</lastName>
+        <netWorth>1000729</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Australia</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>General Elecric</sponsorName>
+        <sponsorDescription>Random description 8</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>356</worldRankplace>
+    <name>History</name>
+    <corporation>
+      <corporationName>Parent Corp 2</corporationName>
+      <owner>
+        <firstName>Baker</firstName>
+        <lastName>Davis</lastName>
+        <netWorth>3850720</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>India</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Nike</sponsorName>
+        <sponsorDescription>Random description 9</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>12</worldRankplace>
+    <name>TV 1000</name>
+    <corporation>
+      <corporationName>Parent Corp 3</corporationName>
+      <owner>
+        <firstName>Baldwin</firstName>
+        <lastName>Miller</lastName>
+        <netWorth>6825280</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Argentina</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Adidas</sponsorName>
+        <sponsorDescription>Random description 10</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>381</worldRankplace>
+    <name>CNN</name>
+    <corporation>
+      <corporationName>Parent Corp 4</corporationName>
+      <owner>
+        <firstName>Barnett</firstName>
+        <lastName>Garsia</lastName>
+        <netWorth>9905968</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Kazakhstan</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Intel</sponsorName>
+        <sponsorDescription>Random description 11</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>155</worldRankplace>
+    <name>Exotic</name>
+    <corporation>
+      <corporationName>Parent Corp 5</corporationName>
+      <owner>
+        <firstName>Brady</firstName>
+        <lastName>Davis</lastName>
+        <netWorth>5564675</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Mexico</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Pepsi</sponsorName>
+        <sponsorDescription>Random description 12</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>498</worldRankplace>
+    <name>The Voice</name>
+    <corporation>
+      <corporationName>Parent Corp 6</corporationName>
+      <owner>
+        <firstName>Cameron</firstName>
+        <lastName>Rodriguez</lastName>
+        <netWorth>7446696</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Iran</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>JPMorgan Chase</sponsorName>
+        <sponsorDescription>Random description 13</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>187</worldRankplace>
+    <name>Disney Channel</name>
+    <corporation>
+      <corporationName>Parent Corp 7</corporationName>
+      <owner>
+        <firstName>Chanel</firstName>
+        <lastName>Taylor</lastName>
+        <netWorth>9373408</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Libia</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Cisco</sponsorName>
+        <sponsorDescription>Random description 14</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>250</worldRankplace>
+    <name>DM Sat</name>
+    <corporation>
+      <corporationName>Parent Corp 8</corporationName>
+      <owner>
+        <firstName>Chapelle</firstName>
+        <lastName>Jackson</lastName>
+        <netWorth>5114548</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Mali</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>IBM</sponsorName>
+        <sponsorDescription>Random description 15</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>42</worldRankplace>
+    <name>Boomerang</name>
+    <corporation>
+      <corporationName>Parent Corp 9</corporationName>
+      <owner>
+        <firstName>Carter</firstName>
+        <lastName>Lee</lastName>
+        <netWorth>4734279</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Columbia</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Visa</sponsorName>
+        <sponsorDescription>Random description 16</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+  <channel>
+    <worldRankplace>181</worldRankplace>
+    <name>AXN</name>
+    <corporation>
+      <corporationName>Parent Corp 10</corporationName>
+      <owner>
+        <firstName>Bronson</firstName>
+        <lastName>Harris</lastName>
+        <netWorth>8689642</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Bolivia</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Microsoft</sponsorName>
+        <sponsorDescription>Random description 17</sponsorDescription>
       </sponsor>
     </sponsors>
   </channel>

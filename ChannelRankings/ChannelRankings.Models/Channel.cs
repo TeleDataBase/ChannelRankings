@@ -12,6 +12,8 @@ namespace ChannelRankings.Models
         [MaxLength(40)]
         public string Name { get; set; }
 
+        public int WorldRankplace { get; set; }
+
         public virtual Corporation Corporation { get; set; }
 
         [Required]

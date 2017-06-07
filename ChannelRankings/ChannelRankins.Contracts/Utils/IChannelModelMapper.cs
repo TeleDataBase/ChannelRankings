@@ -6,7 +6,7 @@ namespace ChannelRankins.Contracts.Utils
 {
     public interface IChannelModelMapper
     {
-        Channel CreateChannel(string name, Corporation corporation, Country country, ICollection<Sponsor> sponsors);
+        Channel CreateChannel(string name,int worldRankplace, Corporation corporation, Country country, ICollection<Sponsor> sponsors);
 
         Corporation CreateCorporation(string name, Owner owner);
 

@@ -7,11 +7,12 @@ namespace ChannelRankings.Utils.ModelFactory
 {
     public class ChannelModelMapper : IChannelModelMapper
     {
-        public Channel CreateChannel(string name, Corporation corporation, Country country, ICollection<Sponsor> sponsors)
+        public Channel CreateChannel(string name, int worldRankplace, Corporation corporation, Country country, ICollection<Sponsor> sponsors)
         {
             var channel = new Channel()
             {
                 Name = name,
+                WorldRankplace = worldRankplace,
                 Corporation = corporation,
                 Country = country,
                 Sponsors = sponsors

@@ -10,6 +10,9 @@ namespace ChannelRankings.XmlModels
         [XmlElement("name")]
         public string Name { get; set; }
 
+        [XmlElement("worldRankplace")]
+        public int WorldRankplace { get; set; }
+
         [XmlElement("corporation")]
         public virtual Corporation Corporation { get; set; }
 

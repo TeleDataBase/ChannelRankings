@@ -94,6 +94,7 @@ namespace ChannelRankings.Utils.Importers
                         channelsToAdd.Add(
                             this.ModelMapper.CreateChannel(
                                 ch.Name,
+                                ch.WorldRankplace,
                                 dbCorporation,
                                 dbChannelCountry,
                                 dbChannelSponsors

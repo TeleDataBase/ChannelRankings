@@ -13,7 +13,7 @@ namespace ChannelRankings.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201706071644099_Initial"; }
+            get { return "201706071744122_Initial"; }
         }
         
         string IMigrationMetadata.Source
