@@ -1,10 +1,11 @@
 ﻿using ChannelRankings.Models;
 using ChannelRankings.Models.Authorities;
+using ChannelRankins.Contracts.Utils;
 using System.Collections.Generic;
 
 namespace ChannelRankings.Utils.ModelFactory
 {
-    public class ChannelModelMapper
+    public class ChannelModelMapper : IChannelModelMapper
     {
         public Channel CreateChannel(string name, Corporation corporation, Country country, ICollection<Sponsor> sponsors)
         {

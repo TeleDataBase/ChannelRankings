@@ -18,15 +18,16 @@ namespace ChannelRankings.Data
         {
         }
 
-        public IDbSet<Corporation> Corporations { get; set; }
+        // Changed from IDbSet to DbSet to provide .AddRange method when adding records to database
+        public DbSet<Corporation> Corporations { get; set; }
 
-        public IDbSet<Sponsor> Sponsors { get; set; }
+        public DbSet<Sponsor> Sponsors { get; set; }
 
-        public IDbSet<Channel> Channels { get; set; }
+        public DbSet<Channel> Channels { get; set; }
 
-        public IDbSet<Country> Countries { get; set; }
+        public DbSet<Country> Countries { get; set; }
 
-        public IDbSet<Owner> Owners { get; set; }
+        public DbSet<Owner> Owners { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -87,7 +88,7 @@ namespace ChannelRankings.Data
             return base.Entry<T>(entity);
         }
 
-        IDbSet<T> IDbContext.Set<T>()
+        DbSet<T> IDbContext.Set<T>()
         {
             return base.Set<T>();
         }
