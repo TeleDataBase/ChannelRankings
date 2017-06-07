@@ -31,11 +31,11 @@ namespace ChannelRankings.Utils.Importers
                 var ranklist = (XmlModels.Ranklist)serializer.Deserialize(fileStream);
                 var channels = ranklist.Channels.ToList();
 
-                var channelsToAdd = new List<Models.Channel>();
-                var ownersToAdd = new List<Models.Owner>();
-                var corporationsToAdd = new List<Models.Authorities.Corporation>();
-                var countriesToAdd = new List<Models.Country>();
-                var sponsorsToAdd = new List<Models.Authorities.Sponsor>();
+                var channelsToAdd = new HashSet<Models.Channel>();
+                var ownersToAdd = new HashSet<Models.Owner>();
+                var corporationsToAdd = new HashSet<Models.Authorities.Corporation>();
+                var countriesToAdd = new HashSet<Models.Country>();
+                var sponsorsToAdd = new HashSet<Models.Authorities.Sponsor>();
 
                 foreach (XmlModels.Channel ch in channels)
                 {
@@ -62,18 +62,19 @@ namespace ChannelRankings.Utils.Importers
                         countriesToAdd.Add(dbChannelCountry);
                     }
 
-                    var dbChannelSponsors = new List<Sponsor>();
+                    var dbChannelSponsors = new HashSet<Sponsor>();
 
                     foreach (var sp in ch.Sponsors)
                     {
+                        var currentSponsor = this.ModelMapper.CreateSponsor(sp.Name, sp.About);
+
                         if (!this.ContainsSponsor(sp.Name))
                         {
-                            dbChannelSponsors.Add(this.ModelMapper.CreateSponsor(sp.Name, sp.About));
+                            sponsorsToAdd.Add(currentSponsor);
                         }
+
+                        dbChannelSponsors.Add(currentSponsor);
                     }
-
-                    sponsorsToAdd.AddRange(dbChannelSponsors);
-
 
                     var dbCorporation = this.Database.Corporations.GetAll().Where(x => x.Name == ch.Corporation.Name).FirstOrDefault();
 

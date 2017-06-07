@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="Importers\XmlImporter.cs" />
     <Compile Include="ModelFactory\ChannelModelMapper.cs" />
-    <Compile Include="ModelFactory\SqlServerModelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

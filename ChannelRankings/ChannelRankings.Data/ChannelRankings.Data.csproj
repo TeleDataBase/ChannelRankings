@@ -48,9 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericRepository.cs" />
-    <Compile Include="Migrations\201706061326316_TestMigration.cs" />
-    <Compile Include="Migrations\201706061326316_TestMigration.Designer.cs">
-      <DependentUpon>201706061326316_TestMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201706071644099_Initial.cs" />
+    <Compile Include="Migrations\201706071644099_Initial.Designer.cs">
+      <DependentUpon>201706071644099_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SqlServerDataProvider.cs" />
@@ -72,8 +72,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706061326316_TestMigration.resx">
-      <DependentUpon>201706061326316_TestMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706071644099_Initial.resx">
+      <DependentUpon>201706071644099_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
