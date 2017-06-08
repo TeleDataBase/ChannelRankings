@@ -66,7 +66,7 @@ namespace ChannelRankings.Utils.Reporters
 
         private void AddDocHeader(Document document)
         {
-            Image headerImage = Image.GetInstance("../../tv.png");
+            Image headerImage = Image.GetInstance("../../../../Data/Resources/tv-logo.png");
             headerImage.SetAbsolutePosition(15, document.PageSize.Height - 95);
             headerImage.ScaleAbsolute(70, 70);
 

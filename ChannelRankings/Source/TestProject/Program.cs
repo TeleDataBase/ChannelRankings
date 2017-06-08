@@ -5,6 +5,8 @@ using ChannelRankings.Utils.Importers;
 using ChannelRankings.Utils.ModelFactory;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using ChannelRankings.Utils.Reporters;
+using System.IO;
 
 namespace TestProject
 {
@@ -20,13 +22,13 @@ namespace TestProject
 
             //Importer
 
-            //var importer = new XmlImporter(modelMapper, db);
-            //importer.Import();
+            var importer = new XmlImporter(modelMapper, db);
+            importer.Import();
 
             //Reporter
 
             //var reporter = new PdfReporter(db);
-            //var savePath = new DirectoryInfo("../../report.pdf");
+            //var savePath = new DirectoryInfo("../../../../Data/Output/pdf-report.pdf");
 
             //reporter.CreateReport(savePath);
         }

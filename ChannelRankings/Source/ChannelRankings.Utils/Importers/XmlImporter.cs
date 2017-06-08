@@ -10,7 +10,7 @@ namespace ChannelRankings.Utils.Importers
 {
     public class XmlImporter : IXmlImporter
     {
-        private const string XmlFilePath = "../../generated-channels.xml";
+        private const string XmlFilePath = "../../../../Data/Input/xml-inputData.xml";
 
         public XmlImporter(IChannelModelMapper modelMapper, ISqlServerDatabase database)
         {

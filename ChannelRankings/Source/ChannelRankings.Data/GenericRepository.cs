@@ -29,7 +29,6 @@ namespace ChannelRankings.Data
 
         public void Delete(T entity)
         {
-            //this.DbSet.Remove(entity);
             var entry = this.Context.Entry(entity);
             entry.State = EntityState.Deleted;
         }
