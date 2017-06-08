@@ -64,9 +64,7 @@
     <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\SovietChannel.cs" />
-    <Compile Include="Company.cs" />
     <Compile Include="LegacyContext.cs" />
-    <Compile Include="Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
