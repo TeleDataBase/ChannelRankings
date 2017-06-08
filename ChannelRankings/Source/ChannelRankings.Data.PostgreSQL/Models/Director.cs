@@ -12,7 +12,8 @@ namespace ChannelRankings.Data.PostgreSQL.Models
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(40)]
+        [MaxLength(20)]
         public string Name { get; set; }
+        
     }
 }
