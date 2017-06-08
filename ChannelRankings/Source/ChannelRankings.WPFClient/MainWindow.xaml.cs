@@ -50,9 +50,8 @@ namespace ChannelRankings.WPFClient
 
         private void GeneratePdfReport_Click(object sender, RoutedEventArgs e)
         {
-            var database = new SqlServerDataProvider(new SqlServerDbContext());
             var savePath = new DirectoryInfo(ReportSavePath);
-            var reporter = new PdfReporter(database);
+            var reporter = new PdfReporter(this.database);
 
             reporter.CreateReport(savePath.FullName);
             MessageBox.Show("Pdf Reports generated successfully!");
