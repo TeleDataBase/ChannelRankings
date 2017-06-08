@@ -56,14 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Company.cs" />
-    <Compile Include="CompanyContext.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="Migrations\201706081045237_first.cs" />
-    <Compile Include="Migrations\201706081045237_first.Designer.cs">
-      <DependentUpon>201706081045237_first.cs</DependentUpon>
+    <Compile Include="Migrations\201706081935263_first.cs" />
+    <Compile Include="Migrations\201706081935263_first.Designer.cs">
+      <DependentUpon>201706081935263_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Director.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\SovietChannel.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="LegacyContext.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -71,8 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706081045237_first.resx">
-      <DependentUpon>201706081045237_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706081935263_first.resx">
+      <DependentUpon>201706081935263_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

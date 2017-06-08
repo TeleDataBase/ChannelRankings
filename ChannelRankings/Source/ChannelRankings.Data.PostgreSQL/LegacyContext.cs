@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChannelRankings.Data.PostgreSQL.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,15 +8,19 @@ using System.Threading.Tasks;
 
 namespace ChannelRankings.Data.PostgreSQL
 {
-    public class CompanyContext : DbContext
+    public class LegacyContext : DbContext
     {
-        public virtual DbSet<Company> CompanySet { get; set; }
-        public virtual DbSet<Employee> EmployeeSet { get; set; }
-
-        public CompanyContext() : base("NpgsqlConnectionString")
+        
+        public LegacyContext() : base("NpgsqlConnectionString")
         {
 
         }
+
+        public virtual DbSet<SovietChannel> Channels { get; set; }
+
+        public virtual DbSet<Director> Directors { get; set; }
+
+        public virtual DbSet<Country> Countries { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

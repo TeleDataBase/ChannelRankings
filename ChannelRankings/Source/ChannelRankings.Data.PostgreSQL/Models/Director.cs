@@ -5,19 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChannelRankings.Data.PostgreSQL
+namespace ChannelRankings.Data.PostgreSQL.Models
 {
-    public class Company
+    public class Director
     {
-        public Company()
-        {
-            Employees = new HashSet<Employee>();
-        }
         public int Id { get; set; }
-        [Required]
-        public string Name { get; set; }
-        public int YearFounded { get; set; }
 
-        public virtual ICollection<Employee> Employees { get; set; }
+        [Required]
+        [MaxLength(40)]
+        public string Name { get; set; }
     }
 }
