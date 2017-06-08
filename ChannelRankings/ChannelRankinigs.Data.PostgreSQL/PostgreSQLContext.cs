@@ -4,8 +4,9 @@ namespace ChannelRankinigs.Data.PostgreSQL
 {
     public class PostgreSQLContext : DbContext
     {
+        private static readonly string DbConnectionName = "NpgsqlConnectionString";
 
-        public PostgreSQLContext() : base("NpgsqlConnectionString")
+        public PostgreSQLContext() : base(DbConnectionName)
         {
 
         }

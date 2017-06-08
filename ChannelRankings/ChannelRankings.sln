@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankins.Contracts", "ChannelRankins.Contracts\ChannelRankins.Contracts.csproj", "{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankinigs.Data.PostgreSQL", "ChannelRankinigs.Data.PostgreSQL\ChannelRankinigs.Data.PostgreSQL.csproj", "{2AAC5940-8128-497C-A1EE-D32CB33595DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRankings.Data.PostgreSQL", "ChannelRankings.Data.PostgreSQL\ChannelRankings.Data.PostgreSQL.csproj", "{1AF3A167-F06F-45B4-B025-F635BE2B3D8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D23F6A2-8B67-41D0-888E-C41C67FCA47E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2AAC5940-8128-497C-A1EE-D32CB33595DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2AAC5940-8128-497C-A1EE-D32CB33595DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2AAC5940-8128-497C-A1EE-D32CB33595DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2AAC5940-8128-497C-A1EE-D32CB33595DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF3A167-F06F-45B4-B025-F635BE2B3D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF3A167-F06F-45B4-B025-F635BE2B3D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF3A167-F06F-45B4-B025-F635BE2B3D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF3A167-F06F-45B4-B025-F635BE2B3D8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

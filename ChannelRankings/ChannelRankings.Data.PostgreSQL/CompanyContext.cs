@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ChannelRankings.Data.PostgreSQL
+{
+    public class CompanyContext : DbContext
+    {
+        public virtual DbSet<Company> CompanySet { get; set; }
+        public virtual DbSet<Employee> EmployeeSet { get; set; }
+
+        public CompanyContext() : base("NpgsqlConnectionString")
+        {
+
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("public");
+            base.OnModelCreating(modelBuilder);
+        }
+    }
+}
