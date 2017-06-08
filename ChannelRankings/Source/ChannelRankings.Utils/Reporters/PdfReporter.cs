@@ -18,7 +18,7 @@ namespace ChannelRankings.Utils.Reporters
             this.database = database;
         }
 
-        public void CreateReport(DirectoryInfo savePath)
+        public void CreateReport(string savePath)
         {
             var leftRightMargin = 10;
             var topBottomMargin = 20;
@@ -26,7 +26,7 @@ namespace ChannelRankings.Utils.Reporters
             var document = new Document(PageSize.LETTER, leftRightMargin, leftRightMargin, topBottomMargin, topBottomMargin);
             var databaseChannels = this.database.Channels.GetAll().ToList();
 
-            using (var fs = new FileStream(savePath.FullName, FileMode.Create))
+            using (var fs = new FileStream(savePath, FileMode.Create))
             {
                 PdfWriter writer = PdfWriter.GetInstance(document, fs);
 

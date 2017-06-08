@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChannelRankings.WPFClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="800">
     <Grid>
-        
+        <Button x:Name="importXmlButton" Content="Import XML" HorizontalAlignment="Left" Margin="68,33,0,0" VerticalAlignment="Top" Width="151" Height="29" FontSize="16" FontWeight="Bold" Click="importXmlButton_Click"/>
+        <Button x:Name="GeneratePdfReport" Content="Generate Pdf Report" HorizontalAlignment="Left" Margin="281,33,0,0" VerticalAlignment="Top" Width="180" Height="29" FontSize="16" FontWeight="Bold" Click="GeneratePdfReport_Click"/>
+
     </Grid>
 </Window>
