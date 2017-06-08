@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1AF3A167-F06F-45B4-B025-F635BE2B3D8E}</ProjectGuid>
+    <ProjectGuid>{18E22C6B-8A08-49D5-97B9-1B5A7E8C1488}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ChannelRankings.Data.PostgreSQL</RootNamespace>
@@ -56,25 +56,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201706082118389_first.cs" />
-    <Compile Include="Migrations\201706082118389_first.Designer.cs">
-      <DependentUpon>201706082118389_first.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Company.cs" />
+    <Compile Include="CompanyContext.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Director.cs" />
-    <Compile Include="Models\Country.cs" />
-    <Compile Include="Models\SovietChannel.cs" />
-    <Compile Include="LegacyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706082118389_first.resx">
-      <DependentUpon>201706082118389_first.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
