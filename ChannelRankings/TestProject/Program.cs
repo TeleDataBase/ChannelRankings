@@ -1,6 +1,10 @@
-﻿using ChannelRankings.Data;
+﻿using System;
+using ChannelRankings.Data;
+using ChannelRankings.Models;
 using ChannelRankings.Utils.Importers;
 using ChannelRankings.Utils.ModelFactory;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace TestProject
 {
@@ -14,10 +18,17 @@ namespace TestProject
             var context = new SqlServerDbContext();
             var db = new SqlServerDataProvider(context);
 
-            var importer = new XmlImporter(modelMapper, db);
-            
-            // Imports data from XML to Sql server database
-            importer.Import();
+            //Importer
+
+            //var importer = new XmlImporter(modelMapper, db);
+            //importer.Import();
+
+            //Reporter
+
+            //var reporter = new PdfReporter(db);
+            //var savePath = new DirectoryInfo("../../report.pdf");
+
+            //reporter.CreateReport(savePath);
         }
     }
 }
