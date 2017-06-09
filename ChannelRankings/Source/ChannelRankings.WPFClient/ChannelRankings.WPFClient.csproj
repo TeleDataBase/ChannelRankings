@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -61,20 +64,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AddOperations\AddModelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddOperations\AddOwner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddOperations\AddSponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddOperations\AddModelWindow.xaml.cs">
+      <DependentUpon>AddModelWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddOperations\AddOwner.xaml.cs">
+      <DependentUpon>AddOwner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddOperations\AddSponsor.xaml.cs">
+      <DependentUpon>AddSponsor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Configuration\ChannelRankingNinjectModule.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MyDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyDialog.xaml.cs">
+      <DependentUpon>MyDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -106,6 +138,10 @@
       <Project>{68931661-55B1-4241-9B91-65E327D917F6}</Project>
       <Name>ChannelRankings.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChannelRankings.Models\ChannelRankings.Models.csproj">
+      <Project>{1CD62DC8-1847-4408-B788-6B88DB802895}</Project>
+      <Name>ChannelRankings.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChannelRankings.Utils\ChannelRankings.Utils.csproj">
       <Project>{1E2D1B6B-42C2-40C2-A9FF-31C9193B67D7}</Project>
       <Name>ChannelRankings.Utils</Name>
@@ -115,5 +151,6 @@
       <Name>ChannelRankins.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

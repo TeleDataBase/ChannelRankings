@@ -1,0 +1,17 @@
+﻿<Window x:Class="ChannelRankings.WPFClient.AddOperations.AddSponsor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChannelRankings.WPFClient.AddOperations"
+        mc:Ignorable="d"
+        Title="AddSponsor" Height="300" Width="300">
+    <Grid>
+        <Button x:Name="AddSponsorButton" Content="Add" HorizontalAlignment="Left" Margin="134,231,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddSponsorButton_Click"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="sponsorName" HorizontalAlignment="Left" Height="23" Margin="85,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
+        <TextBox x:Name="sponsorDescription" HorizontalAlignment="Left" Height="126" Margin="88,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+
+    </Grid>
+</Window>

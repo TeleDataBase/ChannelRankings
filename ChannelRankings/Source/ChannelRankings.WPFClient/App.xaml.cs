@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChannelRankings.WPFClient.Configuration;
+using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,21 @@ namespace ChannelRankings.WPFClient
     /// </summary>
     public partial class App : Application
     {
+        private IKernel kernel;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            this.ConfigureContainer();
+            Current.MainWindow.Show();
+        }
+
+        private void ConfigureContainer()
+        {
+            this.kernel = new StandardKernel(new ChannelRankingNinjectModule());
+            this.MainWindow = this.kernel.Get<MainWindow>();
+        }
     }
+
+    
 }

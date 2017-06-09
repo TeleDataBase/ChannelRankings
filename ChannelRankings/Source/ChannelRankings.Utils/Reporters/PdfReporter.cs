@@ -12,10 +12,12 @@ namespace ChannelRankings.Utils.Reporters
     public class PdfReporter : IPdfReporter
     {
         private ISqlServerDatabase database;
+        private IRepository<Channel> channels;
 
-        public PdfReporter(ISqlServerDatabase database)
+        public PdfReporter(ISqlServerDatabase database, IRepository<Channel> channels)
         {
             this.database = database;
+            this.channels = channels;
         }
 
         public void CreateReport(string savePath)
@@ -24,7 +26,9 @@ namespace ChannelRankings.Utils.Reporters
             var topBottomMargin = 20;
 
             var document = new Document(PageSize.LETTER, leftRightMargin, leftRightMargin, topBottomMargin, topBottomMargin);
-            var databaseChannels = this.database.Channels.GetAll().ToList();
+            var databaseChannels = this.channels.GetAll()
+                .OrderByDescending(x => long.Parse(x.Corporation.Owner.NetWorth))
+                .ToList();
 
             using (var fs = new FileStream(savePath, FileMode.Create))
             {

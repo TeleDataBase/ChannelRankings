@@ -39,7 +39,8 @@ namespace ChannelRankings.Utils.Importers
 
                 foreach (XmlModels.Channel ch in channels)
                 {
-                    var dbCorporationOwner = this.Database.Owners.GetAll().Where(x => x.FirstName == ch.Corporation.Owner.FirstName &&
+                    var dbCorporationOwner = this.Database.Context.Owners
+                        .Where(x => x.FirstName == ch.Corporation.Owner.FirstName &&
                     x.LastName == ch.Corporation.Owner.LastName).FirstOrDefault();
 
                     if (dbCorporationOwner == null)
@@ -53,7 +54,7 @@ namespace ChannelRankings.Utils.Importers
                         ownersToAdd.Add(dbCorporationOwner);
                     }
 
-                    var dbChannelCountry = this.Database.Countries.GetAll().Where(x => x.Name == ch.Country.Name).FirstOrDefault();
+                    var dbChannelCountry = this.Database.Context.Countries.Where(x => x.Name == ch.Country.Name).FirstOrDefault();
 
                     if (dbChannelCountry == null)
                     {
@@ -76,7 +77,7 @@ namespace ChannelRankings.Utils.Importers
                         dbChannelSponsors.Add(currentSponsor);
                     }
 
-                    var dbCorporation = this.Database.Corporations.GetAll().Where(x => x.Name == ch.Corporation.Name).FirstOrDefault();
+                    var dbCorporation = this.Database.Context.Corporations.Where(x => x.Name == ch.Corporation.Name).FirstOrDefault();
 
                     if (dbCorporation == null)
                     {
@@ -87,7 +88,7 @@ namespace ChannelRankings.Utils.Importers
                         corporationsToAdd.Add(dbCorporation);
                     }
 
-                    var dbchannel = this.Database.Channels.GetAll().Where(x => x.Name == ch.Name).FirstOrDefault();
+                    var dbchannel = this.Database.Context.Channels.Where(x => x.Name == ch.Name).FirstOrDefault();
 
                     if (dbchannel == null)
                     {
@@ -115,7 +116,7 @@ namespace ChannelRankings.Utils.Importers
 
         private bool ContainsSponsor(string sponsorName)
         {
-            return this.Database.Sponsors.GetAll().Where(x => x.Name == sponsorName) != null;
+            return this.Database.Context.Sponsors.Where(x => x.Name == sponsorName) != null;
         }
     }
 }

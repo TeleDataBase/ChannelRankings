@@ -21,6 +21,8 @@ using System.Threading;
 using System.Diagnostics;
 using ChannelRankings.Utils.Importers;
 using ChannelRankings.Utils.ModelFactory;
+using ChannelRankings.Models;
+using ChannelRankings.Models.Authorities;
 
 namespace ChannelRankings.WPFClient
 {
@@ -32,11 +34,18 @@ namespace ChannelRankings.WPFClient
         private const string ReportSavePath = "../../../../Data/Output/pdf-report.pdf";
 
         private ISqlServerDatabase database;
+        private IRepository<Owner> owners;
+        private IRepository<Sponsor> sponsors;
+        private IRepository<Channel> channels;
 
-        public MainWindow()
+        public MainWindow(ISqlServerDatabase database, IRepository<Owner> owners, IRepository<Sponsor> sponsors,
+            IRepository<Channel> channels)
         {
-            this.database = new SqlServerDataProvider(new SqlServerDbContext());
             this.InitializeComponent();
+            this.database = database;
+            this.owners = owners;
+            this.sponsors = sponsors;
+            this.channels = channels;
         }
 
         private void importXmlButton_Click(object sender, RoutedEventArgs e)
@@ -51,13 +60,32 @@ namespace ChannelRankings.WPFClient
         private void GeneratePdfReport_Click(object sender, RoutedEventArgs e)
         {
             var savePath = new DirectoryInfo(ReportSavePath);
-            var reporter = new PdfReporter(this.database);
+            var reporter = new PdfReporter(this.database, this.channels);
 
             reporter.CreateReport(savePath.FullName);
             MessageBox.Show("Pdf Reports generated successfully!");
 
             // Open report in browser
             Process.Start(savePath.FullName);
+        }
+
+        private void CreateModelButton_Click(object sender, RoutedEventArgs e)
+        {
+            var createModelWindow = new AddModelWindow(this.database, this.owners, this.sponsors);
+            createModelWindow.ShowDialog();
+        }
+
+        private string GetDialogInfo(string titleText)
+        {
+            var dialog = new MyDialog(titleText);
+            var responceText = string.Empty;
+
+            if (dialog.ShowDialog() == true)
+            {
+                responceText = dialog.ResponseText;
+            }
+
+            return responceText;
         }
     }
 }

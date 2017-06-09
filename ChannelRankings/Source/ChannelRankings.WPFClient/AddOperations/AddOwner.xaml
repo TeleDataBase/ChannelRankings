@@ -1,0 +1,19 @@
+﻿<Window x:Class="ChannelRankings.WPFClient.AddOwner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChannelRankings.WPFClient"
+        mc:Ignorable="d"
+        Title="AddOwner" Height="300" Width="300">
+    <Grid>
+        <Button x:Name="AddOwnerButton" Content="Add" HorizontalAlignment="Left" Margin="134,231,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddOwnerButton_Click"/>
+        <Label Content="First name:" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Last name:" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Net worth:" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ownerFirstName" HorizontalAlignment="Left" Height="23" Margin="95,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="ownerLastName" HorizontalAlignment="Left" Height="23" Margin="95,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="ownerNetWorth" HorizontalAlignment="Left" Height="23" Margin="95,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189"/>
+
+    </Grid>
+</Window>

@@ -7,6 +7,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using ChannelRankings.Utils.Reporters;
 using System.IO;
+using System.Linq;
 
 namespace TestProject
 {
@@ -20,17 +21,21 @@ namespace TestProject
             var context = new SqlServerDbContext();
             var db = new SqlServerDataProvider(context);
 
+            //var countryToDelete = db.Countries.GetAll().Where(x => x.Id == 19).FirstOrDefault();
+
+            //db.Countries.Delete(countryToDelete);
+            //db.Commit();
             //Importer
 
-            var importer = new XmlImporter(modelMapper, db);
-            importer.Import();
+            //var importer = new XmlImporter(modelMapper, db);
+            //importer.Import();
 
             //Reporter
 
             //var reporter = new PdfReporter(db);
             //var savePath = new DirectoryInfo("../../../../Data/Output/pdf-report.pdf");
 
-            //reporter.CreateReport(savePath);
+            //reporter.CreateReporcwt(savePath);
         }
     }
 }

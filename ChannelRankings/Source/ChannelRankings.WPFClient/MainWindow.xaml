@@ -9,6 +9,7 @@
     <Grid>
         <Button x:Name="importXmlButton" Content="Import XML" HorizontalAlignment="Left" Margin="68,33,0,0" VerticalAlignment="Top" Width="151" Height="29" FontSize="16" FontWeight="Bold" Click="importXmlButton_Click"/>
         <Button x:Name="GeneratePdfReport" Content="Generate Pdf Report" HorizontalAlignment="Left" Margin="281,33,0,0" VerticalAlignment="Top" Width="180" Height="29" FontSize="16" FontWeight="Bold" Click="GeneratePdfReport_Click"/>
+        <Button x:Name="CreateModelButton" Content="Create Model" HorizontalAlignment="Left" Margin="68,118,0,0" VerticalAlignment="Top" Width="151" Height="29" FontSize="16" FontWeight="Bold" Click="CreateModelButton_Click"/>
 
     </Grid>
 </Window>

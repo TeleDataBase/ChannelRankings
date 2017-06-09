@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<channelRanklist>
+  <channel>
+    <worldRankplace>234</worldRankplace>
+    <name>BNT1</name>
+    <corporation>
+      <corporationName>De da znam1</corporationName>
+      <owner>
+        <firstName>Chichko1</firstName>
+        <lastName>Chichkov</lastName>
+        <netWorth>120120120</netWorth>
+      </owner>
+    </corporation>
+    <country>
+      <countryName>Bulgaria</countryName>
+    </country>
+    <sponsors>
+      <sponsor>
+        <sponsorName>Aspasia</sponsorName>
+        <sponsorDescription>Limonada za vas</sponsorDescription>
+      </sponsor>
+    </sponsors>
+  </channel>
+</channelRanklist>
