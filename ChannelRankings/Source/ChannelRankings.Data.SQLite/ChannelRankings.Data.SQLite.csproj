@@ -64,11 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\YGroup.cs" />
-    <Compile Include="Entity\YUser.cs" />
-    <Compile Include="Migrations\201704250420238_InitialCreate.cs" />
-    <Compile Include="Migrations\201704250420238_InitialCreate.Designer.cs">
-      <DependentUpon>201704250420238_InitialCreate.cs</DependentUpon>
+    <Compile Include="Entity\YouTubeChannel.cs" />
+    <Compile Include="Migrations\201706091426011_initial.cs" />
+    <Compile Include="Migrations\201706091426011_initial.Designer.cs">
+      <DependentUpon>201706091426011_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\SqliteConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,8 +78,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704250420238_InitialCreate.resx">
-      <DependentUpon>201704250420238_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706091426011_initial.resx">
+      <DependentUpon>201706091426011_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
