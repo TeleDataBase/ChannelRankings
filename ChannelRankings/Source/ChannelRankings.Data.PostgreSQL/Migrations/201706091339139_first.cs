@@ -28,7 +28,7 @@ namespace ChannelRankings.Data.PostgreSQL.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false, maxLength: 20),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -37,7 +37,7 @@ namespace ChannelRankings.Data.PostgreSQL.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 40),
+                        Name = c.String(nullable: false, maxLength: 20),
                     })
                 .PrimaryKey(t => t.Id);
             

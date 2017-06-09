@@ -1,13 +1,8 @@
-﻿using Sqlitecodefirst.Entity;
-using Sqlitecodefirst.Migrations;
+﻿using ChannelChannelRankings.Data.SQLite.Migrations;
+using ChannelRankings.Data.SQLite.Entity;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Data.SQLite.EF6.Migrations;
-/// <summary>
-/// 作者：音樂咖啡
-/// 联系方式：QQ 136463644
-/// </summary>
-namespace Sqlitecodefirst
+
+namespace ChannelRankings.Data.SQLite
 {
     //[DbConfigurationType(typeof(ContextMigrationConfiguration))]
     public class SqliteDBContext : DbContext
@@ -18,7 +13,6 @@ namespace Sqlitecodefirst
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<SqliteDBContext, ContextMigrationConfiguration>(true));
         }
 
-        public DbSet<YUser> Yusers { get; set; }
-        public DbSet<YGroup> Ygroup { get; set; }
+        public DbSet<YouTubeChannel> YouTubeChannels { get; set; }
     }
 }
