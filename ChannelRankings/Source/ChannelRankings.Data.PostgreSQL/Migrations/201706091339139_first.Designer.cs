@@ -13,7 +13,7 @@ namespace ChannelRankings.Data.PostgreSQL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201706082118389_first"; }
+            get { return "201706091339139_first"; }
         }
         
         string IMigrationMetadata.Source
