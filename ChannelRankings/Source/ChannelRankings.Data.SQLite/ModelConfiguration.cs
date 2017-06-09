@@ -1,5 +1,5 @@
-﻿using System.Data.Entity;
-using SQLite.CodeFirst.Console.Entity;
+﻿using ChannelRankings.Data.SQLite.Entity;
+using System.Data.Entity;
 
 namespace ChannelRankings.Data.SQLite
 {

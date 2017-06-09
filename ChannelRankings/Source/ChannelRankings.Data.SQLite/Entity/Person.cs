@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SQLite.CodeFirst;
+using System.ComponentModel.DataAnnotations;
 
 namespace ChannelRankings.Data.SQLite.Entity
 {
