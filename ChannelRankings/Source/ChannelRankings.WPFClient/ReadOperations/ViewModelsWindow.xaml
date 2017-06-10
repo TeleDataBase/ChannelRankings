@@ -8,7 +8,8 @@
         Title="ViewModelsWindow" Height="300" Width="300">
     <Grid>
         <Button x:Name="ViewChannelsButton" Content="View channels" HorizontalAlignment="Left" Margin="58,57,0,0" VerticalAlignment="Top" Width="168" Height="29" FontSize="16" FontWeight="Bold" Click="ViewChannelsButton_Click"/>
-        <Button x:Name="ViewCountriesButton" Content="View countries" HorizontalAlignment="Left" Margin="58,160,0,0" VerticalAlignment="Top" Width="168" Height="29" FontWeight="Bold" FontSize="16" Click="ViewCountriesButton_Click"/>
+        <Button x:Name="ViewCountriesButton" Content="View countries" HorizontalAlignment="Left" Margin="58,119,0,0" VerticalAlignment="Top" Width="168" Height="29" FontWeight="Bold" FontSize="16" Click="ViewCountriesButton_Click"/>
+        <Button x:Name="ViewOwnersButton" Content="View owners" HorizontalAlignment="Left" Margin="58,185,0,0" VerticalAlignment="Top" Width="168" Height="29" FontSize="16" FontWeight="Bold" Click="ViewOwnersButton_Click"/>
 
     </Grid>
 </Window>

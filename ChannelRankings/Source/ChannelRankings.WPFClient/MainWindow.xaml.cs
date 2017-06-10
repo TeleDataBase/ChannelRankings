@@ -25,6 +25,7 @@ using ChannelRankings.Models;
 using ChannelRankings.Models.Authorities;
 using ChannelRankings.WPFClient.ReadOperations;
 using ChannelRankings.WPFClient.UpdateOperations;
+using ChannelRankings.WPFClient.DeleteOperations;
 
 namespace ChannelRankings.WPFClient
 {
@@ -94,7 +95,7 @@ namespace ChannelRankings.WPFClient
 
         private void viewDataButton_Click(object sender, RoutedEventArgs e)
         {
-            var viewModelsWindow = new ViewModelsWindow(this, this.countries, this.channels);
+            var viewModelsWindow = new ViewModelsWindow(this, this.countries, this.channels, this.owners);
             viewModelsWindow.ShowDialog();
 
         }
@@ -107,7 +108,8 @@ namespace ChannelRankings.WPFClient
 
         private void DeleteModelButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var deleteModelsWindow = new DeleteModelsWindow(this.database, this.owners, this.countries);
+            deleteModelsWindow.ShowDialog();
         }
     }
 }

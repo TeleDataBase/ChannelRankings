@@ -24,13 +24,15 @@ namespace ChannelRankings.WPFClient.ReadOperations
         private MainWindow mainWindow;
         private IRepository<Country> countries;
         private IRepository<Channel> channels;
+        private IRepository<Owner> owners;
 
-        public ViewModelsWindow(MainWindow mainWindow, IRepository<Country> countries, IRepository<Channel> channels)
+        public ViewModelsWindow(MainWindow mainWindow, IRepository<Country> countries, IRepository<Channel> channels, IRepository<Owner> owners)
         {
             this.InitializeComponent();
             this.mainWindow = mainWindow;
             this.countries = countries;
             this.channels = channels;
+            this.owners = owners;
         }
 
         private void ViewChannelsButton_Click(object sender, RoutedEventArgs e)
@@ -58,6 +60,21 @@ namespace ChannelRankings.WPFClient.ReadOperations
                 .ToList();
 
             this.mainWindow.dataGrid.ItemsSource = countries;
+        }
+
+        private void ViewOwnersButton_Click(object sender, RoutedEventArgs e)
+        {
+            var owners = this.owners.GetAll()
+                .Select(x => new
+                {
+                    x.Id,
+                    x.FirstName,
+                    x.LastName,
+                    x.NetWorth
+                })
+                .ToList();
+
+            this.mainWindow.dataGrid.ItemsSource = owners;
         }
     }
 }

@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DeleteOperations\DeleteModelsWindow.xaml.cs">
+      <DependentUpon>DeleteModelsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReadOperations\ViewModelsWindow.xaml.cs">
       <DependentUpon>ViewModelsWindow.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddOperations\AddSponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteOperations\DeleteModelsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
