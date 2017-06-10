@@ -23,6 +23,7 @@ using ChannelRankings.Utils.Importers;
 using ChannelRankings.Utils.ModelFactory;
 using ChannelRankings.Models;
 using ChannelRankings.Models.Authorities;
+using ChannelRankings.WPFClient.ReadOperations;
 
 namespace ChannelRankings.WPFClient
 {
@@ -37,15 +38,17 @@ namespace ChannelRankings.WPFClient
         private IRepository<Owner> owners;
         private IRepository<Sponsor> sponsors;
         private IRepository<Channel> channels;
+        private IRepository<Country> countries;
 
         public MainWindow(ISqlServerDatabase database, IRepository<Owner> owners, IRepository<Sponsor> sponsors,
-            IRepository<Channel> channels)
+            IRepository<Channel> channels, IRepository<Country> countries)
         {
             this.InitializeComponent();
             this.database = database;
             this.owners = owners;
             this.sponsors = sponsors;
             this.channels = channels;
+            this.countries = countries;
         }
 
         private void importXmlButton_Click(object sender, RoutedEventArgs e)
@@ -86,6 +89,23 @@ namespace ChannelRankings.WPFClient
             }
 
             return responceText;
+        }
+
+        private void viewDataButton_Click(object sender, RoutedEventArgs e)
+        {
+            var viewModelsWindow = new ViewModelsWindow(this, this.countries, this.channels);
+            viewModelsWindow.ShowDialog();
+
+        }
+
+        private void UpdateModelButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteModelButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

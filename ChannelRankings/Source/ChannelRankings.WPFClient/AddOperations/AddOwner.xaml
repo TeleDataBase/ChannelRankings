@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="AddOwner" Height="300" Width="300">
     <Grid>
-        <Button x:Name="AddOwnerButton" Content="Add" HorizontalAlignment="Left" Margin="134,231,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddOwnerButton_Click"/>
+        <Button x:Name="AddOwnerButton" Content="Add" HorizontalAlignment="Left" Margin="108,213,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddOwnerButton_Click"/>
         <Label Content="First name:" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
         <Label Content="Last name:" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top"/>
         <Label Content="Net worth:" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="ownerFirstName" HorizontalAlignment="Left" Height="23" Margin="95,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189"/>
-        <TextBox x:Name="ownerLastName" HorizontalAlignment="Left" Height="23" Margin="95,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189"/>
-        <TextBox x:Name="ownerNetWorth" HorizontalAlignment="Left" Height="23" Margin="95,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="ownerFirstName" HorizontalAlignment="Left" Height="23" Margin="95,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163"/>
+        <TextBox x:Name="ownerLastName" HorizontalAlignment="Left" Height="23" Margin="95,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163"/>
+        <TextBox x:Name="ownerNetWorth" HorizontalAlignment="Left" Height="23" Margin="95,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163"/>
 
     </Grid>
 </Window>

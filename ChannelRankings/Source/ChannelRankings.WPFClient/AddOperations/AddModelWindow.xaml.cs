@@ -37,14 +37,19 @@ namespace ChannelRankings.WPFClient
 
         private void AddOwner_Click(object sender, RoutedEventArgs e)
         {
-            var addOwnerWindow = new AddOwner(this.database, this.owners);
-            addOwnerWindow.ShowDialog();
+            
         }
 
         private void AddSponsor_Click(object sender, RoutedEventArgs e)
         {
             var addSponsorWindow = new AddSponsor(this.database, this.sponsors);
             addSponsorWindow.ShowDialog();
+        }
+
+        private void AddOwner_Click_1(object sender, RoutedEventArgs e)
+        {
+            var addOwnerWindow = new AddOwner(this.database, this.owners);
+            addOwnerWindow.ShowDialog();
         }
     }
 }

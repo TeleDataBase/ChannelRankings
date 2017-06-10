@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="AddSponsor" Height="300" Width="300">
     <Grid>
-        <Button x:Name="AddSponsorButton" Content="Add" HorizontalAlignment="Left" Margin="134,231,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddSponsorButton_Click"/>
+        <Button x:Name="AddSponsorButton" Content="Add" HorizontalAlignment="Left" Margin="110,223,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddSponsorButton_Click"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
         <Label Content="Description:" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="sponsorName" HorizontalAlignment="Left" Height="23" Margin="85,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
-        <TextBox x:Name="sponsorDescription" HorizontalAlignment="Left" Height="126" Margin="88,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+        <TextBox x:Name="sponsorName" HorizontalAlignment="Left" Height="23" Margin="85,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="sponsorDescription" HorizontalAlignment="Left" Height="126" Margin="88,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
 
     </Grid>
 </Window>

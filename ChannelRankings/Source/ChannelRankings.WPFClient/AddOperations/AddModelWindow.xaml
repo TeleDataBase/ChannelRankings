@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="AddModelWindow" Height="300" Width="300">
     <Grid>
-        <Button x:Name="AddOwner" Content="Add new owner" HorizontalAlignment="Left" Margin="67,66,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddOwner_Click"/>
         <Button x:Name="AddSponsor" Content="Add new sponsor" HorizontalAlignment="Left" Margin="67,160,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="14" FontWeight="Bold" Click="AddSponsor_Click"/>
+        <Button x:Name="AddOwner" Content="Add new owner" HorizontalAlignment="Left" Margin="67,67,0,0" VerticalAlignment="Top" Width="150" FontSize="14" FontWeight="Bold" Height="29" Click="AddOwner_Click_1"/>
 
     </Grid>
 </Window>

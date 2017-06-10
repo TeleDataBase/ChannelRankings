@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChannelRankings.WPFClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="ChannelRankings" Height="500" Width="800">
     <Grid>
-        <Button x:Name="importXmlButton" Content="Import XML" HorizontalAlignment="Left" Margin="68,33,0,0" VerticalAlignment="Top" Width="151" Height="29" FontSize="16" FontWeight="Bold" Click="importXmlButton_Click"/>
-        <Button x:Name="GeneratePdfReport" Content="Generate Pdf Report" HorizontalAlignment="Left" Margin="281,33,0,0" VerticalAlignment="Top" Width="180" Height="29" FontSize="16" FontWeight="Bold" Click="GeneratePdfReport_Click"/>
-        <Button x:Name="CreateModelButton" Content="Create Model" HorizontalAlignment="Left" Margin="68,118,0,0" VerticalAlignment="Top" Width="151" Height="29" FontSize="16" FontWeight="Bold" Click="CreateModelButton_Click"/>
+        <Button x:Name="importXmlButton" Content="Import XML" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" Width="168" Height="29" FontSize="16" FontWeight="Bold" Click="importXmlButton_Click"/>
+        <Button x:Name="GeneratePdfReport" Content="Generate Pdf Report" HorizontalAlignment="Left" Margin="25,97,0,0" VerticalAlignment="Top" Width="168" Height="29" FontSize="16" FontWeight="Bold" Click="GeneratePdfReport_Click" HorizontalContentAlignment="Center"/>
+        <Button x:Name="CreateModelButton" Content="Create models" HorizontalAlignment="Left" Margin="25,227,0,0" VerticalAlignment="Top" Width="168" Height="29" FontSize="16" FontWeight="Bold" Click="CreateModelButton_Click"/>
+        <DataGrid x:Name="dataGrid" x:FieldModifier="public" HorizontalAlignment="Left" Height="391" Margin="250,37,0,0" VerticalAlignment="Top" Width="514"/>
+        <Button x:Name="viewDataButton" Content="View models" HorizontalAlignment="Left" Margin="25,285,0,0" VerticalAlignment="Top" Width="168" Height="29" FontSize="16" FontWeight="Bold" Click="viewDataButton_Click"/>
+        <Button x:Name="UpdateModelButton" Content="Update models" HorizontalAlignment="Left" Margin="25,342,0,0" VerticalAlignment="Top" Width="168" FontSize="16" FontWeight="Bold" Height="29" Click="UpdateModelButton_Click"/>
+        <Button x:Name="DeleteModelButton" Content="Delete models" HorizontalAlignment="Left" Margin="25,399,0,0" VerticalAlignment="Top" Width="168" Height="29" FontSize="16" FontWeight="Bold" Click="DeleteModelButton_Click"/>
 
     </Grid>
 </Window>
