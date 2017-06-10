@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbManipulationManager.cs" />
     <Compile Include="Importers\XmlImporter.cs" />
     <Compile Include="ModelFactory\ChannelModelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\IDbContext.cs" />
+    <Compile Include="Data\IDbManipulationManager.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\ISqlServerDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
