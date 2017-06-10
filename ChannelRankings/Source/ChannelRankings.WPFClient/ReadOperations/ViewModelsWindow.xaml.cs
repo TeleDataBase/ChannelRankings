@@ -40,9 +40,7 @@ namespace ChannelRankings.WPFClient.ReadOperations
                 {
                     x.Id,
                     x.WorldRankplace,
-                    x.Name,
-                    CountryName = x.Country?.Name,
-                    CorporationName = x.Corporation?.Name
+                    x.Name
                 })
                 .ToList();
 

@@ -24,6 +24,7 @@ using ChannelRankings.Utils.ModelFactory;
 using ChannelRankings.Models;
 using ChannelRankings.Models.Authorities;
 using ChannelRankings.WPFClient.ReadOperations;
+using ChannelRankings.WPFClient.UpdateOperations;
 
 namespace ChannelRankings.WPFClient
 {
@@ -100,7 +101,8 @@ namespace ChannelRankings.WPFClient
 
         private void UpdateModelButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var updateModelsWindow = new UpdateModelsWindow(this.database, this.channels, this.countries);
+            updateModelsWindow.ShowDialog();
         }
 
         private void DeleteModelButton_Click(object sender, RoutedEventArgs e)

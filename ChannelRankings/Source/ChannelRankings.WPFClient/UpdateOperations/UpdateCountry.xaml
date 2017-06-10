@@ -1,0 +1,17 @@
+﻿<Window x:Class="ChannelRankings.WPFClient.UpdateOperations.UpdateCountry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChannelRankings.WPFClient.UpdateOperations"
+        mc:Ignorable="d"
+        Title="UpdateCountry" Height="300" Width="300">
+    <Grid>
+        <Button x:Name="UpdateCoutryButton" Content="Update" HorizontalAlignment="Left" Margin="76,199,0,0" VerticalAlignment="Top" Width="168" FontSize="16" FontWeight="Bold" Height="29" Click="UpdateCoutryButton_Click"/>
+        <Label Content="Id:" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"/>
+        <Label Content="New name:" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="countryId" HorizontalAlignment="Left" Height="23" Margin="76,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="countryName" HorizontalAlignment="Left" Height="23" Margin="76,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
+
+    </Grid>
+</Window>

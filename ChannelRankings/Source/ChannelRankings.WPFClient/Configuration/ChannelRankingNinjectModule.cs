@@ -15,14 +15,14 @@ namespace ChannelRankings.WPFClient.Configuration
     {
         public override void Load()
         {
+            this.Bind<ISqlServerDatabase>().To<SqlServerDataProvider>().InSingletonScope();
+            this.Bind<IDbContext>().To<SqlServerDbContext>().InSingletonScope();
+
             this.Bind<IRepository<Owner>>().To<GenericRepository<Owner>>().InSingletonScope();
             this.Bind<IRepository<Channel>>().To<GenericRepository<Channel>>().InSingletonScope();
             this.Bind<IRepository<Country>>().To<GenericRepository<Country>>().InSingletonScope();
             this.Bind<IRepository<Corporation>>().To<GenericRepository<Corporation>>().InSingletonScope();
             this.Bind<IRepository<Sponsor>>().To<GenericRepository<Sponsor>>().InSingletonScope();
-
-            this.Bind<ISqlServerDatabase>().To<SqlServerDataProvider>().InSingletonScope();
-            this.Bind<IDbContext>().To<SqlServerDbContext>().InSingletonScope();
         }
     }
 }

@@ -67,6 +67,15 @@
     <Compile Include="ReadOperations\ViewModelsWindow.xaml.cs">
       <DependentUpon>ViewModelsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UpdateOperations\UpdateChannel.xaml.cs">
+      <DependentUpon>UpdateChannel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOperations\UpdateCountry.xaml.cs">
+      <DependentUpon>UpdateCountry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOperations\UpdateModelsWindow.xaml.cs">
+      <DependentUpon>UpdateModelsWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddOperations\AddModelWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,6 +115,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ReadOperations\ViewModelsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateOperations\UpdateChannel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateOperations\UpdateCountry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateOperations\UpdateModelsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
