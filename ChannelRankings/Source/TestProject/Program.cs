@@ -9,6 +9,7 @@ using ChannelRankings.Utils.Reporters;
 using System.IO;
 using System.Linq;
 using ChannelRankings.Models.Authorities;
+using ChannelRankings.Data.PostgreSQL;
 
 namespace TestProject
 {
@@ -16,35 +17,13 @@ namespace TestProject
     {
         public static void Main()
         {
-            // This setup should be put in a container configuration class in the WPFClient project
+            //var modelMapper = new ChannelModelMapper();
+            //var context = new SqlServerDbContext();
+            //var db = new SqlServerDataProvider(context);
 
-            var modelMapper = new ChannelModelMapper();
-            var context = new SqlServerDbContext();
-            var db = new SqlServerDataProvider(context);
+            var postgreDb = new LegacyContext();
 
-            //var channels = new GenericRepository<Channel>(context);
-            //var oldRecord = channels.GetById(18);
-
-            //oldRecord.Name = "Btn1";
-            //channels.Update(oldRecord);
-            //db.Commit();
-
-
-            //var countryToDelete = db.Countries.GetAll().Where(x => x.Id == 19).FirstOrDefault();
-
-            //db.Countries.Delete(countryToDelete);
-            //db.Commit();
-            //Importer
-
-            //var importer = new XmlImporter(modelMapper, db);
-            //importer.Import();
-
-            //Reporter
-
-            //var reporter = new PdfReporter(db);
-            //var savePath = new DirectoryInfo("../../../../Data/Output/pdf-report.pdf");
-
-            //reporter.CreateReporcwt(savePath);
+            postgreDb.Database.CreateIfNotExists();
         }
     }
 }

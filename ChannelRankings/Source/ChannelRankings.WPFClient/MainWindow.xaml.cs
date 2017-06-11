@@ -54,7 +54,6 @@ namespace ChannelRankings.WPFClient
             reporter.CreateReport(savePath.FullName);
             MessageBox.Show("Pdf Reports generated successfully!");
 
-            // Open report in browser
             Process.Start(savePath.FullName);
         }
 
