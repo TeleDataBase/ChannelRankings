@@ -21,9 +21,9 @@ namespace TestProject
             //var context = new SqlServerDbContext();
             //var db = new SqlServerDataProvider(context);
 
-            var postgreDb = new LegacyContext();
+            var db = new PostgreSqlContext();
 
-            postgreDb.Database.CreateIfNotExists();
+            db.Database.CreateIfNotExists();
         }
     }
 }

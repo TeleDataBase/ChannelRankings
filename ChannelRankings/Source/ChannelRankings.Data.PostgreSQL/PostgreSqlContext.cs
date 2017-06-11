@@ -1,4 +1,5 @@
 ﻿using ChannelRankings.Data.PostgreSQL.Models;
+using ChannelRankings.XmlModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,19 +9,15 @@ using System.Threading.Tasks;
 
 namespace ChannelRankings.Data.PostgreSQL
 {
-    public class LegacyContext : DbContext
+    public class PostgreSqlContext : DbContext
     {
-        
-        public LegacyContext() : base("NpgsqlConnectionString")
+        public PostgreSqlContext() : base("NpgsqlConnectionString")
         {
-
         }
 
-        public virtual DbSet<SovietChannel> Channels { get; set; }
+        DbSet<Models.Country> Countries { get; set; }
 
-        public virtual DbSet<Director> Directors { get; set; }
-
-        public virtual DbSet<Country> Countries { get; set; }
+        DbSet<RadioChannel> RadioChannels { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -56,15 +56,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201706091339139_first.cs" />
-    <Compile Include="Migrations\201706091339139_first.Designer.cs">
-      <DependentUpon>201706091339139_first.cs</DependentUpon>
+    <Compile Include="Migrations\201706112032052_Initial.cs" />
+    <Compile Include="Migrations\201706112032052_Initial.Designer.cs">
+      <DependentUpon>201706112032052_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Country.cs" />
-    <Compile Include="Models\SovietChannel.cs" />
-    <Compile Include="LegacyContext.cs" />
+    <Compile Include="Models\RadioChannel.cs" />
+    <Compile Include="PostgreSqlContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,8 +71,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706091339139_first.resx">
-      <DependentUpon>201706091339139_first.cs</DependentUpon>
+    <ProjectReference Include="..\ChannelRankings.XmlModels\ChannelRankings.XmlModels.csproj">
+      <Project>{D2F641D3-CB82-42E8-97E6-870281CD9695}</Project>
+      <Name>ChannelRankings.XmlModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706112032052_Initial.resx">
+      <DependentUpon>201706112032052_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
