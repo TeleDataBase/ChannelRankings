@@ -22,15 +22,12 @@ namespace TestProject
             var context = new SqlServerDbContext();
             var db = new SqlServerDataProvider(context);
 
-            var channels = new GenericRepository<Channel>(context);
-            var oldRecord = channels.GetById(18);
+            //var channels = new GenericRepository<Channel>(context);
+            //var oldRecord = channels.GetById(18);
 
-            oldRecord.Name = "Btn1";
-
-
-            channels.Update(oldRecord);
-
-            db.Commit();
+            //oldRecord.Name = "Btn1";
+            //channels.Update(oldRecord);
+            //db.Commit();
 
 
             //var countryToDelete = db.Countries.GetAll().Where(x => x.Id == 19).FirstOrDefault();

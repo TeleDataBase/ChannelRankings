@@ -1,18 +1,7 @@
 ﻿using ChannelRankings.Models;
 using ChannelRankins.Contracts.Data;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ChannelRankings.WPFClient.ReadOperations
 {
@@ -22,17 +11,17 @@ namespace ChannelRankings.WPFClient.ReadOperations
     public partial class ViewModelsWindow : Window
     {
         private MainWindow mainWindow;
-        private IRepository<Country> countries;
         private IRepository<Channel> channels;
         private IRepository<Owner> owners;
+        private IRepository<Country> countries;
 
-        public ViewModelsWindow(MainWindow mainWindow, IRepository<Country> countries, IRepository<Channel> channels, IRepository<Owner> owners)
+        public ViewModelsWindow(MainWindow mainWindow, IRepository<Channel> channels, IRepository<Owner> owners, IRepository<Country> countries)
         {
             this.InitializeComponent();
             this.mainWindow = mainWindow;
-            this.countries = countries;
             this.channels = channels;
             this.owners = owners;
+            this.countries = countries;
         }
 
         private void ViewChannelsButton_Click(object sender, RoutedEventArgs e)

@@ -1,18 +1,6 @@
-﻿using ChannelRankings.Models;
-using ChannelRankins.Contracts.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using ChannelRankins.Contracts.Data;
 
 namespace ChannelRankings.WPFClient.DeleteOperations
 {
@@ -21,16 +9,12 @@ namespace ChannelRankings.WPFClient.DeleteOperations
     /// </summary>
     public partial class DeleteModelsWindow : Window
     {
-        private ISqlServerDatabase database;
-        private IRepository<Owner> owners;
-        private IRepository<Country> countries;
+        private IDbManipulationManager dbManager;
 
-        public DeleteModelsWindow(ISqlServerDatabase database, IRepository<Owner> owners, IRepository<Country> countries)
+        public DeleteModelsWindow(IDbManipulationManager dbManager)
         {
             this.InitializeComponent();
-            this.database = database;
-            this.owners = owners;
-            this.countries = countries;
+            this.dbManager = dbManager;
         }
 
         private void DeleteModelButton_Click(object sender, RoutedEventArgs e)
@@ -42,13 +26,11 @@ namespace ChannelRankings.WPFClient.DeleteOperations
 
                 if (this.deleteOwnerRadio.IsChecked == true)
                 {
-                    var ownerToDelete = this.owners.GetById(deleteModelId);
-                    this.owners.Delete(ownerToDelete);
+                    this.dbManager.DeleteOwner(deleteModelId);
                 }
                 else if (this.deleteCountryRadio.IsChecked == true)
                 {
-                    var countryToDelete = this.countries.GetById(deleteModelId);
-                    this.countries.Delete(countryToDelete);
+                    this.dbManager.DeleteCountry(deleteModelId);
                 }
             }
             catch (Exception ex)
@@ -58,7 +40,6 @@ namespace ChannelRankings.WPFClient.DeleteOperations
                 return;
             }
 
-            this.database.Commit();
             MessageBox.Show("Model deleted successfully!");
             this.Close();
         }

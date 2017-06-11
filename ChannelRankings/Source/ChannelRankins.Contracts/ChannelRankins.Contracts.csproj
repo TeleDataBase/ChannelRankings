@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\IDatabaseReader.cs" />
     <Compile Include="Data\IDbContext.cs" />
     <Compile Include="Data\IDbManipulationManager.cs" />
     <Compile Include="Data\IRepository.cs" />

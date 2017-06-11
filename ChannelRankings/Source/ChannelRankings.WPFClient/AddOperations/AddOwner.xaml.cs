@@ -1,18 +1,5 @@
-﻿using ChannelRankings.Models;
-using ChannelRankins.Contracts.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ChannelRankins.Contracts.Data;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ChannelRankings.WPFClient
 {
@@ -21,14 +8,12 @@ namespace ChannelRankings.WPFClient
     /// </summary>
     public partial class AddOwner : Window
     {
-        private ISqlServerDatabase database;
-        private IRepository<Owner> owners;
+        private IDbManipulationManager dbManager;
 
-        public AddOwner(ISqlServerDatabase database, IRepository<Owner> owners)
+        public AddOwner(IDbManipulationManager dbManager)
         {
             this.InitializeComponent();
-            this.database = database;
-            this.owners = owners;
+            this.dbManager = dbManager;
         }
 
         private void AddOwnerButton_Click(object sender, RoutedEventArgs e)
@@ -38,24 +23,10 @@ namespace ChannelRankings.WPFClient
             var lastName = this.ownerLastName.Text;
             var netWorth = this.ownerNetWorth.Text;
 
-            if (netWorth.Any(c => !char.IsDigit(c)))
-            {
-                MessageBox.Show("Net worth cannot contain chars other than numbers!");
-            }
-            else
-            {
-                this.owners.Add(new Owner()
-                {
-                    FirstName = firstName,
-                    LastName = lastName,
-                    NetWorth = netWorth
-                });
+            this.dbManager.AddOwnerToDb(firstName, lastName, netWorth);
 
-                this.database.Commit();
-
-                MessageBox.Show("Owner successfully added!");
-                this.Close();
-            }
+            MessageBox.Show("Owner successfully added!");
+            this.Close();
         }
     }
 }

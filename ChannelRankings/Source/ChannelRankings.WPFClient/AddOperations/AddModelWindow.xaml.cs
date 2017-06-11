@@ -23,16 +23,12 @@ namespace ChannelRankings.WPFClient
     /// </summary>
     public partial class AddModelWindow : Window
     {
-        private ISqlServerDatabase database;
-        private IRepository<Owner> owners;
-        private IRepository<Sponsor> sponsors;
+        private IDbManipulationManager dbManager;
 
-        public AddModelWindow(ISqlServerDatabase database, IRepository<Owner> owners, IRepository<Sponsor> sponsors)
+        public AddModelWindow(IDbManipulationManager dbManager)
         {
             this.InitializeComponent();
-            this.database = database;
-            this.owners = owners;
-            this.sponsors = sponsors;
+            this.dbManager = dbManager;
         }
 
         private void AddOwner_Click(object sender, RoutedEventArgs e)
@@ -42,13 +38,13 @@ namespace ChannelRankings.WPFClient
 
         private void AddSponsor_Click(object sender, RoutedEventArgs e)
         {
-            var addSponsorWindow = new AddSponsor(this.database, this.sponsors);
+            var addSponsorWindow = new AddSponsor(this.dbManager);
             addSponsorWindow.ShowDialog();
         }
 
         private void AddOwner_Click_1(object sender, RoutedEventArgs e)
         {
-            var addOwnerWindow = new AddOwner(this.database, this.owners);
+            var addOwnerWindow = new AddOwner(this.dbManager);
             addOwnerWindow.ShowDialog();
         }
     }

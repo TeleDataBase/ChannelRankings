@@ -48,6 +48,7 @@
     <Compile Include="Importers\XmlImporter.cs" />
     <Compile Include="ModelFactory\ChannelModelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readers\DatabaseReader.cs" />
     <Compile Include="Reporters\PdfReporter.cs" />
   </ItemGroup>
   <ItemGroup>

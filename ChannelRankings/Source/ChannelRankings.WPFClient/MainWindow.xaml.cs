@@ -36,20 +36,20 @@ namespace ChannelRankings.WPFClient
     {
         private const string ReportSavePath = "../../../../Data/Output/pdf-report.pdf";
 
+        private IDbManipulationManager dbManager;
         private ISqlServerDatabase database;
-        private IRepository<Owner> owners;
-        private IRepository<Sponsor> sponsors;
         private IRepository<Channel> channels;
+        private IRepository<Owner> owners;
         private IRepository<Country> countries;
 
-        public MainWindow(ISqlServerDatabase database, IRepository<Owner> owners, IRepository<Sponsor> sponsors,
-            IRepository<Channel> channels, IRepository<Country> countries)
+        public MainWindow(ISqlServerDatabase database, IDbManipulationManager dbManager, IDatabaseReader dbReader, IRepository<Channel> channels,
+            IRepository<Owner> owners, IRepository<Country> countries)
         {
             this.InitializeComponent();
             this.database = database;
-            this.owners = owners;
-            this.sponsors = sponsors;
+            this.dbManager = dbManager;
             this.channels = channels;
+            this.owners = owners;
             this.countries = countries;
         }
 
@@ -76,39 +76,26 @@ namespace ChannelRankings.WPFClient
 
         private void CreateModelButton_Click(object sender, RoutedEventArgs e)
         {
-            var createModelWindow = new AddModelWindow(this.database, this.owners, this.sponsors);
+            var createModelWindow = new AddModelWindow(this.dbManager);
             createModelWindow.ShowDialog();
-        }
-
-        private string GetDialogInfo(string titleText)
-        {
-            var dialog = new MyDialog(titleText);
-            var responceText = string.Empty;
-
-            if (dialog.ShowDialog() == true)
-            {
-                responceText = dialog.ResponseText;
-            }
-
-            return responceText;
         }
 
         private void viewDataButton_Click(object sender, RoutedEventArgs e)
         {
-            var viewModelsWindow = new ViewModelsWindow(this, this.countries, this.channels, this.owners);
+            var viewModelsWindow = new ViewModelsWindow(this, this.channels, this.owners, this.countries);
             viewModelsWindow.ShowDialog();
 
         }
 
         private void UpdateModelButton_Click(object sender, RoutedEventArgs e)
         {
-            var updateModelsWindow = new UpdateModelsWindow(this.database, this.channels, this.countries);
+            var updateModelsWindow = new UpdateModelsWindow(this.dbManager);
             updateModelsWindow.ShowDialog();
         }
 
         private void DeleteModelButton_Click(object sender, RoutedEventArgs e)
         {
-            var deleteModelsWindow = new DeleteModelsWindow(this.database, this.owners, this.countries);
+            var deleteModelsWindow = new DeleteModelsWindow(this.dbManager);
             deleteModelsWindow.ShowDialog();
         }
     }

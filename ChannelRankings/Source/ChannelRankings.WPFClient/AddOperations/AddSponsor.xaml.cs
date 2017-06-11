@@ -1,18 +1,5 @@
-﻿using ChannelRankings.Models.Authorities;
-using ChannelRankins.Contracts.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ChannelRankins.Contracts.Data;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ChannelRankings.WPFClient.AddOperations
 {
@@ -21,14 +8,12 @@ namespace ChannelRankings.WPFClient.AddOperations
     /// </summary>
     public partial class AddSponsor : Window
     {
-        private ISqlServerDatabase database;
-        private IRepository<Sponsor> sponsors;
+        private IDbManipulationManager dbManager;
 
-        public AddSponsor(ISqlServerDatabase database, IRepository<Sponsor> sponsors)
+        public AddSponsor(IDbManipulationManager dbManager)
         {
             this.InitializeComponent();
-            this.database = database;
-            this.sponsors = sponsors;
+            this.dbManager = dbManager;
         }
 
         private void AddSponsorButton_Click(object sender, RoutedEventArgs e)
@@ -37,13 +22,7 @@ namespace ChannelRankings.WPFClient.AddOperations
             var description = this.sponsorDescription.Text;
 
 
-            this.sponsors.Add(new Sponsor()
-            {
-                Name = name,
-                About = description
-            });
-
-            this.database.Commit();
+            this.dbManager.AddSponsorToDb(name, description);
 
             MessageBox.Show("Sponsor successfully added!");
             this.Close();

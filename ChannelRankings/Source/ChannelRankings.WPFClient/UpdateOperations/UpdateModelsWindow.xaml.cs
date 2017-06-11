@@ -1,18 +1,5 @@
-﻿using ChannelRankings.Models;
+﻿using System.Windows;
 using ChannelRankins.Contracts.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ChannelRankings.WPFClient.UpdateOperations
 {
@@ -21,27 +8,23 @@ namespace ChannelRankings.WPFClient.UpdateOperations
     /// </summary>
     public partial class UpdateModelsWindow : Window
     {
-        private ISqlServerDatabase database;
-        private IRepository<Channel> channels;
-        private IRepository<Country> countries;
+        private IDbManipulationManager dbManager;
 
-        public UpdateModelsWindow(ISqlServerDatabase database, IRepository<Channel> channels, IRepository<Country> countries)
+        public UpdateModelsWindow(IDbManipulationManager dbManager)
         {
             this.InitializeComponent();
-            this.database = database;
-            this.channels = channels;
-            this.countries = countries;
+            this.dbManager = dbManager;
         }
 
         private void UpdateChannelButton_Click(object sender, RoutedEventArgs e)
         {
-            var updateChannelWindow = new UpdateChannel(this.database, this.channels);
+            var updateChannelWindow = new UpdateChannel(this.dbManager);
             updateChannelWindow.ShowDialog();
         }
 
         private void UpdateCountryButton_Click(object sender, RoutedEventArgs e)
         {
-            var updateCountryWinow = new UpdateCountry(this.database, this.countries);
+            var updateCountryWinow = new UpdateCountry(this.dbManager);
             updateCountryWinow.ShowDialog();
         }
     }
