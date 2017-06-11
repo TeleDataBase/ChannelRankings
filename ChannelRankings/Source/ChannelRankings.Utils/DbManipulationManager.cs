@@ -1,26 +1,24 @@
 ﻿using ChannelRankings.Models;
 using ChannelRankings.Models.Authorities;
 using ChannelRankins.Contracts.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ChannelRankins.Contracts.Utils;
 
 namespace ChannelRankings.Utils
 {
     public class DbManipulationManager : IDbManipulationManager
     {
         private ISqlServerDatabase database;
+        private IValidator validator;
         private IRepository<Channel> channels;
         private IRepository<Owner> owners;
         private IRepository<Sponsor> sponsors;
         private IRepository<Country> countries;
 
-        public DbManipulationManager(ISqlServerDatabase database, IRepository<Owner> owners, IRepository<Sponsor> sponsors,
+        public DbManipulationManager(ISqlServerDatabase database, IValidator validator, IRepository<Owner> owners, IRepository<Sponsor> sponsors,
             IRepository<Channel> channels, IRepository<Country> countries)
         {
             this.database = database;
+            this.validator = validator;
             this.owners = owners;
             this.sponsors = sponsors;
             this.channels = channels;
@@ -29,28 +27,21 @@ namespace ChannelRankings.Utils
 
         public void AddOwnerToDb(string firstName, string lastName, string netWorth)
         {
-            if (netWorth.Any(c => !char.IsDigit(c)))
+            this.owners.Add(new Owner()
             {
-                // Use Bytes2you to validate and throw error which will be caught by a try catch in wpf client
-            }
-            else
-            {
-                this.owners.Add(new Owner()
-                {
-                    FirstName = firstName,
-                    LastName = lastName,
-                    NetWorth = netWorth
-                });
+                FirstName = this.validator.ValidateCreationName(firstName),
+                LastName = this.validator.ValidateCreationName(lastName),
+                NetWorth = this.validator.ValidateNumberValue(netWorth)
+            });
 
-                this.database.Commit();
-            }
+            this.database.Commit();
         }
 
         public void AddSponsorToDb(string name, string description)
         {
             this.sponsors.Add(new Sponsor()
             {
-                Name = name,
+                Name = this.validator.ValidateCreationName(name),
                 About = description
             });
 
@@ -61,9 +52,9 @@ namespace ChannelRankings.Utils
         {
             var channelToUpdate = this.channels.GetById(channelId);
 
-            var newName = string.IsNullOrEmpty(newChannelName) ? channelToUpdate.Name : newChannelName;
+            var newName = string.IsNullOrEmpty(newChannelName) ? channelToUpdate.Name : this.validator.ValidateNameForUpdate(newChannelName);
             var newRankplace = string.IsNullOrEmpty(newChannelRankplace) ?
-                channelToUpdate.WorldRankplace : int.Parse(newChannelRankplace);
+                channelToUpdate.WorldRankplace : int.Parse(this.validator.ValidateNumberValue(newChannelRankplace));
 
             channelToUpdate.Name = newName;
             channelToUpdate.WorldRankplace = newRankplace;
@@ -77,7 +68,7 @@ namespace ChannelRankings.Utils
         {
             var countryToUpdate = this.countries.GetById(countryId);
 
-            var newName = string.IsNullOrEmpty(newCountryName) ? countryToUpdate.Name : newCountryName;
+            var newName = string.IsNullOrEmpty(newCountryName) ? countryToUpdate.Name : this.validator.ValidateNameForUpdate(newCountryName);
 
             countryToUpdate.Name = newName;
 

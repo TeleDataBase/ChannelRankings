@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using ChannelRankins.Contracts.Data;
 
 namespace ChannelRankings.WPFClient.UpdateOperations
@@ -18,12 +19,19 @@ namespace ChannelRankings.WPFClient.UpdateOperations
 
         private void UpdateChannelButton_Click(object sender, RoutedEventArgs e)
         {
-            var channelId = int.Parse(this.channelId.Text);
+            try
+            {
+                var channelId = int.Parse(this.channelId.Text);
 
-            this.dbManager.UpdateChannel(channelId, this.channelName.Text, this.channelRankplace.Text);
+                this.dbManager.UpdateChannel(channelId, this.channelName.Text, this.channelRankplace.Text);
 
-            MessageBox.Show("Channel updated successfully!");
-            this.Close();
+                MessageBox.Show("Channel updated successfully!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -19,7 +19,6 @@ namespace ChannelRankings.WPFClient.DeleteOperations
 
         private void DeleteModelButton_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 var deleteModelId = int.Parse(this.deleteId.Text);
@@ -32,6 +31,9 @@ namespace ChannelRankings.WPFClient.DeleteOperations
                 {
                     this.dbManager.DeleteCountry(deleteModelId);
                 }
+
+                MessageBox.Show("Model deleted successfully!");
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -39,9 +41,6 @@ namespace ChannelRankings.WPFClient.DeleteOperations
                 MessageBox.Show(ex.Message);
                 return;
             }
-
-            MessageBox.Show("Model deleted successfully!");
-            this.Close();
         }
     }
 }

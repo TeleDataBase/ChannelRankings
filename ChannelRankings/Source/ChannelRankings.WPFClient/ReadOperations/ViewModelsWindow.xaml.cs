@@ -1,7 +1,7 @@
-﻿using ChannelRankings.Models;
-using ChannelRankins.Contracts.Data;
-using System.Linq;
+﻿using System.Linq;
 using System.Windows;
+using ChannelRankings.Models;
+using ChannelRankins.Contracts.Data;
 
 namespace ChannelRankings.WPFClient.ReadOperations
 {

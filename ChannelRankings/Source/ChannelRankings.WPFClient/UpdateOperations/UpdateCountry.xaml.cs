@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using ChannelRankins.Contracts.Data;
 
 namespace ChannelRankings.WPFClient.UpdateOperations
@@ -18,12 +19,19 @@ namespace ChannelRankings.WPFClient.UpdateOperations
 
         private void UpdateCoutryButton_Click(object sender, RoutedEventArgs e)
         {
-            var countryId = int.Parse(this.countryId.Text);
+            try
+            {
+                var countryId = int.Parse(this.countryId.Text);
 
-            this.dbManager.UpdateCountry(countryId, this.countryName.Text);
+                this.dbManager.UpdateCountry(countryId, this.countryName.Text);
 
-            MessageBox.Show("Coutry updated successfully!");
-            this.Close();
+                MessageBox.Show("Coutry updated successfully!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

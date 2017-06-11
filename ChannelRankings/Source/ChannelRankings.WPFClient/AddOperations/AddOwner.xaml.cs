@@ -1,5 +1,6 @@
-﻿using ChannelRankins.Contracts.Data;
+﻿using System;
 using System.Windows;
+using ChannelRankins.Contracts.Data;
 
 namespace ChannelRankings.WPFClient
 {
@@ -23,10 +24,17 @@ namespace ChannelRankings.WPFClient
             var lastName = this.ownerLastName.Text;
             var netWorth = this.ownerNetWorth.Text;
 
-            this.dbManager.AddOwnerToDb(firstName, lastName, netWorth);
+            try
+            {
+                this.dbManager.AddOwnerToDb(firstName, lastName, netWorth);
 
-            MessageBox.Show("Owner successfully added!");
-            this.Close();
+                MessageBox.Show("Owner successfully added!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

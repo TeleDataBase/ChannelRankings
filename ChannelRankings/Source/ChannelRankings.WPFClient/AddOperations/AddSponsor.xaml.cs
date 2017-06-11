@@ -1,5 +1,6 @@
-﻿using ChannelRankins.Contracts.Data;
+﻿using System;
 using System.Windows;
+using ChannelRankins.Contracts.Data;
 
 namespace ChannelRankings.WPFClient.AddOperations
 {
@@ -21,11 +22,17 @@ namespace ChannelRankings.WPFClient.AddOperations
             var name = this.sponsorName.Text;
             var description = this.sponsorDescription.Text;
 
+            try
+            {
+                this.dbManager.AddSponsorToDb(name, description);
 
-            this.dbManager.AddSponsorToDb(name, description);
-
-            MessageBox.Show("Sponsor successfully added!");
-            this.Close();
+                MessageBox.Show("Sponsor successfully added!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
         }
     }
 }
