@@ -4,7 +4,6 @@ using ChannelRankings.Models;
 using ChannelRankings.Data;
 using ChannelRankings.Models.Authorities;
 using ChannelRankings.Utils;
-using ChannelRankings.Utils.Readers;
 
 namespace ChannelRankings.WPFClient.Configuration
 {
@@ -15,7 +14,6 @@ namespace ChannelRankings.WPFClient.Configuration
             this.Bind<ISqlServerDatabase>().To<SqlServerDataProvider>().InSingletonScope();
             this.Bind<IDbContext>().To<SqlServerDbContext>().InSingletonScope();
             this.Bind<IDbManipulationManager>().To<DbManipulationManager>().InSingletonScope();
-            this.Bind<IDatabaseReader>().To<DatabaseReader>().InSingletonScope();
 
             this.Bind<IRepository<Owner>>().To<GenericRepository<Owner>>().InSingletonScope();
             this.Bind<IRepository<Channel>>().To<GenericRepository<Channel>>().InSingletonScope();

@@ -1,28 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using ChannelRankings.Data;
 using ChannelRankings.Utils.Reporters;
 using ChannelRankins.Contracts.Data;
 using System.IO;
-using System.Threading;
 using System.Diagnostics;
 using ChannelRankings.Utils.Importers;
 using ChannelRankings.Utils.ModelFactory;
 using ChannelRankings.Models;
-using ChannelRankings.Models.Authorities;
 using ChannelRankings.WPFClient.ReadOperations;
 using ChannelRankings.WPFClient.UpdateOperations;
 using ChannelRankings.WPFClient.DeleteOperations;
@@ -42,7 +26,7 @@ namespace ChannelRankings.WPFClient
         private IRepository<Owner> owners;
         private IRepository<Country> countries;
 
-        public MainWindow(ISqlServerDatabase database, IDbManipulationManager dbManager, IDatabaseReader dbReader, IRepository<Channel> channels,
+        public MainWindow(ISqlServerDatabase database, IDbManipulationManager dbManager, IRepository<Channel> channels,
             IRepository<Owner> owners, IRepository<Country> countries)
         {
             this.InitializeComponent();
