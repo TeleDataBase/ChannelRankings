@@ -71,19 +71,26 @@
     <Compile Include="Migrations\201706121633343_Initial.Designer.cs">
       <DependentUpon>201706121633343_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706121827492_Models update.cs" />
+    <Compile Include="Migrations\201706121827492_Models update.Designer.cs">
+      <DependentUpon>201706121827492_Models update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\SqliteConfiguration.cs" />
-    <Compile Include="Models\YouTubeChannel.cs" />
+    <Compile Include="Models\TvSeries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqliteDBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Database\sqlitedb.sqlite3" />
+    <None Include="Database\SqliteDb.db" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706121633343_Initial.resx">
       <DependentUpon>201706121633343_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706121827492_Models update.resx">
+      <DependentUpon>201706121827492_Models update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
