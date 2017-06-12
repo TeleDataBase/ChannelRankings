@@ -1,9 +1,7 @@
 namespace ChannelRankings.Data.PostgreSQL.Migrations
 {
-    using System;
-    using System.Data.Entity;
+    using ChannelRankings.Data.PostgreSQL.Models;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ChannelRankings.Data.PostgreSQL.PostgreSqlContext>
     {
@@ -14,18 +12,15 @@ namespace ChannelRankings.Data.PostgreSQL.Migrations
 
         protected override void Seed(ChannelRankings.Data.PostgreSQL.PostgreSqlContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var radioChannels = new RadioChannel[]
+            {
+                new RadioChannel(){Name = "The Voice", Frequency ="96.20", MainTopic = "Music" },
+                new RadioChannel(){Name = "Z-Rock", Frequency ="89.10", MainTopic = "Music" },
+                new RadioChannel(){Name = "Radio Nova News", Frequency ="95.70", MainTopic = "News" },
+                new RadioChannel(){Name = "Radio Horizont", Frequency ="100.90", MainTopic = "Boring stuff" }
+            };
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.RadioChannels.AddOrUpdate(radioChannels);
         }
     }
 }

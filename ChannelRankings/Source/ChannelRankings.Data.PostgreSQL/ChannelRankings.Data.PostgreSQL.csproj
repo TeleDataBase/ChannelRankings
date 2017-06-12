@@ -60,8 +60,19 @@
     <Compile Include="Migrations\201706112032052_Initial.Designer.cs">
       <DependentUpon>201706112032052_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706120956245_deleted some stuff.cs" />
+    <Compile Include="Migrations\201706120956245_deleted some stuff.Designer.cs">
+      <DependentUpon>201706120956245_deleted some stuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706121004319_added-nullable coutryId.cs" />
+    <Compile Include="Migrations\201706121004319_added-nullable coutryId.Designer.cs">
+      <DependentUpon>201706121004319_added-nullable coutryId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706121243527_update.cs" />
+    <Compile Include="Migrations\201706121243527_update.Designer.cs">
+      <DependentUpon>201706121243527_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\RadioChannel.cs" />
     <Compile Include="PostgreSqlContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +90,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706112032052_Initial.resx">
       <DependentUpon>201706112032052_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706120956245_deleted some stuff.resx">
+      <DependentUpon>201706120956245_deleted some stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706121004319_added-nullable coutryId.resx">
+      <DependentUpon>201706121004319_added-nullable coutryId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706121243527_update.resx">
+      <DependentUpon>201706121243527_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

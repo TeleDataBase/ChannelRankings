@@ -15,9 +15,7 @@ namespace ChannelRankings.Data.PostgreSQL
         {
         }
 
-        DbSet<Models.Country> Countries { get; set; }
-
-        DbSet<RadioChannel> RadioChannels { get; set; }
+        public DbSet<RadioChannel> RadioChannels { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
