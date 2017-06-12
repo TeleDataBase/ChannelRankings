@@ -1,26 +1,22 @@
-using ChannelRankings.Data.SQLite;
-using ChannelRankings.Data.SQLite.Entity;
-using System.Data.Entity.Migrations;
-using System.Data.SQLite.EF6.Migrations;
-
-
-namespace ChannelChannelRankings.Data.SQLite.Migrations
+namespace Sqlitecodefirst.Migrations
 {
-    internal sealed class ContextMigrationConfiguration : DbMigrationsConfiguration<SqliteDBContext>
+    using ChannelRankings.Data.SQLite.Entity;
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Data.SQLite.EF6.Migrations;
+    using System.Linq;
+
+    internal sealed class SqliteConfiguration : DbMigrationsConfiguration<ChannelRankings.Data.SQLite.SqliteDBContext>
     {
-        public ContextMigrationConfiguration()
+        public SqliteConfiguration()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
             SetSqlGenerator("System.Data.SQLite", new SQLiteMigrationSqlGenerator());
         }
 
-        protected override void Seed(SqliteDBContext context)
+        protected override void Seed(ChannelRankings.Data.SQLite.SqliteDBContext context)
         {
-            //base.Seed(context);
-            //context.Yusers.AddOrUpdate(new Entity.YUser[] { new Entity.YUser() {  UserID=1,UserName="test1", UserSex="man" ,NickName="tetdd"} });
-
-           context.YouTubeChannels.AddOrUpdate(new YouTubeChannel[]
+            context.YouTubeChannels.AddOrUpdate(new YouTubeChannel[]
             {
                 new YouTubeChannel() { Name = "TUSofia", Url = "youtube.com/tusofia", Rank = 7},
                 new YouTubeChannel() { Name = "FMI", Url = "youtube.com/fmi", Rank = 71},

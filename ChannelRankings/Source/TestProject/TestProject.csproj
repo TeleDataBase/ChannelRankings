@@ -75,6 +75,10 @@
       <Project>{1AF3A167-F06F-45B4-B025-F635BE2B3D8E}</Project>
       <Name>ChannelRankings.Data.PostgreSQL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChannelRankings.Data.SQLite\ChannelRankings.Data.SQLite.csproj">
+      <Project>{E307C28D-4783-472F-B8F7-47DD72F10137}</Project>
+      <Name>ChannelRankings.Data.SQLite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChannelRankings.Data\ChannelRankings.Data.csproj">
       <Project>{68931661-55B1-4241-9B91-65E327D917F6}</Project>
       <Name>ChannelRankings.Data</Name>

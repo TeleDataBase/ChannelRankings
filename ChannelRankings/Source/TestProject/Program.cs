@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using ChannelRankings.Models.Authorities;
 using ChannelRankings.Data.PostgreSQL;
+using ChannelRankings.Data.SQLite;
 
 namespace TestProject
 {
@@ -21,9 +22,14 @@ namespace TestProject
             //var context = new SqlServerDbContext();
             //var db = new SqlServerDataProvider(context);
 
-            var db = new PostgreSqlContext();
+            //var db = new PostgreSqlContext();
+
+            //db.Database.CreateIfNotExists();
+
+            var db = new SqliteDBContext();
 
             db.Database.CreateIfNotExists();
+
         }
     }
 }
