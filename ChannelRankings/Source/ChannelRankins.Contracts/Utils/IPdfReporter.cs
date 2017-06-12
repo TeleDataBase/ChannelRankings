@@ -1,5 +1,4 @@
-﻿using System.IO;
-
+﻿
 namespace ChannelRankins.Contracts.Utils
 {
     public interface IPdfReporter

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using ChannelRankings.XmlModels.Authorities;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
+using ChannelRankings.XmlModels.Authorities;
 
 namespace ChannelRankings.XmlModels
 {

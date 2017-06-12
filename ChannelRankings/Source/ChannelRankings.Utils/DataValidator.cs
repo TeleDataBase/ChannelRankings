@@ -1,6 +1,6 @@
-﻿using ChannelRankins.Contracts.Utils;
-using System;
+﻿using System;
 using System.Linq;
+using ChannelRankins.Contracts.Utils;
 
 namespace ChannelRankings.Utils
 {

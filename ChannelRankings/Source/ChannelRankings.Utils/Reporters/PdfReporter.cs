@@ -1,11 +1,11 @@
-﻿using ChannelRankins.Contracts.Utils;
+﻿using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using ChannelRankings.Models;
 using ChannelRankins.Contracts.Data;
-using System.Linq;
+using ChannelRankins.Contracts.Utils;
 
 namespace ChannelRankings.Utils.Reporters
 {

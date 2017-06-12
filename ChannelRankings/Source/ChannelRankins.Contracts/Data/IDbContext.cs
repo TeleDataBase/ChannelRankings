@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using ChannelRankings.Models;
 using ChannelRankings.Models.Authorities;
-using System.Data.Entity.Infrastructure;
 
 namespace ChannelRankins.Contracts.Data
 {

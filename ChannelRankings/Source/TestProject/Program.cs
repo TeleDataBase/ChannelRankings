@@ -1,16 +1,4 @@
-﻿using System;
-using ChannelRankings.Data;
-using ChannelRankings.Models;
-using ChannelRankings.Utils.Importers;
-using ChannelRankings.Utils.ModelFactory;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using ChannelRankings.Utils.Reporters;
-using System.IO;
-using System.Linq;
-using ChannelRankings.Models.Authorities;
-using ChannelRankings.Data.PostgreSQL;
-using ChannelRankings.Data.SQLite;
+﻿using ChannelRankings.Data.SQLite;
 
 namespace TestProject
 {

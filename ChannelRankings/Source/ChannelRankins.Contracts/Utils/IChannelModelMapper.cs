@@ -1,6 +1,6 @@
-﻿using ChannelRankings.Models;
+﻿using System.Collections.Generic;
+using ChannelRankings.Models;
 using ChannelRankings.Models.Authorities;
-using System.Collections.Generic;
 
 namespace ChannelRankins.Contracts.Utils
 {

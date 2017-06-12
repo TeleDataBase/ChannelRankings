@@ -1,6 +1,6 @@
-﻿using ChannelRankings.Models.Authorities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using ChannelRankings.Models.Authorities;
 
 namespace ChannelRankings.Models
 {

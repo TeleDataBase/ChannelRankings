@@ -1,11 +1,5 @@
-﻿using ChannelRankings.Data.PostgreSQL.Models;
-using ChannelRankings.XmlModels;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
+using ChannelRankings.Data.PostgreSQL.Models;
 
 namespace ChannelRankings.Data.PostgreSQL
 {
