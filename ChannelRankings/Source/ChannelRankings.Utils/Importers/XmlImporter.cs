@@ -72,8 +72,9 @@ namespace ChannelRankings.Utils.Importers
                         if (!this.ContainsSponsor(sp.Name))
                         {
                             sponsorsToAdd.Add(currentSponsor);
-                            dbChannelSponsors.Add(currentSponsor);
                         }
+
+                        dbChannelSponsors.Add(currentSponsor);
                     }
 
                     var dbCorporation = this.Database.Context.Corporations.Where(x => x.Name == ch.Corporation.Name).FirstOrDefault();
@@ -115,7 +116,8 @@ namespace ChannelRankings.Utils.Importers
 
         private bool ContainsSponsor(string sponsorName)
         {
-            return this.Database.Context.Sponsors.Where(x => x.Name == sponsorName) != null;
+            var dbSponsor = this.Database.Context.Sponsors.Where(x => x.Name == sponsorName).FirstOrDefault();
+            return dbSponsor != null;
         }
     }
 }
