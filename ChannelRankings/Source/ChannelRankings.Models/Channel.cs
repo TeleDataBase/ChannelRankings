@@ -6,11 +6,6 @@ namespace ChannelRankings.Models
 {
     public class Channel 
     {
-
-        public Channel()
-        {
-            this.Sponsors = new HashSet<Sponsor>();
-        }
         public int Id { get; set; }
 
         [Required]
