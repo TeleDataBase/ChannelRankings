@@ -2,6 +2,7 @@
 using ChannelRankings.Models.Authorities;
 using ChannelRankins.Contracts.Data;
 using ChannelRankins.Contracts.Utils;
+using System.Linq;
 
 namespace ChannelRankings.Utils
 {
@@ -27,25 +28,31 @@ namespace ChannelRankings.Utils
 
         public void AddOwnerToDb(string firstName, string lastName, string netWorth)
         {
-            this.owners.Add(new Owner()
+            if (this.owners.GetAll().Where(x => x.FirstName == firstName && x.LastName == lastName).FirstOrDefault() == null)
             {
-                FirstName = this.validator.ValidateCreationName(firstName),
-                LastName = this.validator.ValidateCreationName(lastName),
-                NetWorth = this.validator.ValidateNumberValue(netWorth)
-            });
+                this.owners.Add(new Owner()
+                {
+                    FirstName = this.validator.ValidateCreationName(firstName),
+                    LastName = this.validator.ValidateCreationName(lastName),
+                    NetWorth = this.validator.ValidateNumberValue(netWorth)
+                });
 
-            this.database.Commit();
+                this.database.Commit();
+            }
         }
 
         public void AddSponsorToDb(string name, string description)
         {
-            this.sponsors.Add(new Sponsor()
+            if (this.sponsors.GetAll().Where(x => x.Name == name && x.About == description).FirstOrDefault() == null)
             {
-                Name = this.validator.ValidateCreationName(name),
-                About = description
-            });
+                this.sponsors.Add(new Sponsor()
+                {
+                    Name = this.validator.ValidateCreationName(name),
+                    About = description
+                });
 
-            this.database.Commit();
+                this.database.Commit();
+            }
         }
 
         public void UpdateChannel(int channelId, string newChannelName, string newChannelRankplace)

@@ -48,9 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericRepository.cs" />
-    <Compile Include="Migrations\201706121907522_update-database.cs" />
-    <Compile Include="Migrations\201706121907522_update-database.Designer.cs">
-      <DependentUpon>201706121907522_update-database.cs</DependentUpon>
+    <Compile Include="Migrations\201706131132565_initial.cs" />
+    <Compile Include="Migrations\201706131132565_initial.Designer.cs">
+      <DependentUpon>201706131132565_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SqlServerDataProvider.cs" />
@@ -72,8 +72,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706121907522_update-database.resx">
-      <DependentUpon>201706121907522_update-database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706131132565_initial.resx">
+      <DependentUpon>201706131132565_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
